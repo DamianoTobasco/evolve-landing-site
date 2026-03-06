@@ -36,6 +36,20 @@ body {
 
 body.terms-page {
   overflow: auto;
+  height: auto;
+  min-height: 100dvh;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(190, 231, 255, 0.18), transparent 24%),
+    radial-gradient(circle at 84% 10%, rgba(171, 135, 255, 0.16), transparent 24%),
+    linear-gradient(180deg, #5f4cff 0%, #8b7dff 32%, #c9bdf0 68%, #efe8fb 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: scroll;
+}
+
+body.terms-page .background-haze,
+body.terms-page .background-rings {
+  display: none;
 }
 
 img {
