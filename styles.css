@@ -34,6 +34,10 @@ body {
   font-family: "Space Grotesk", "Avenir Next", "Segoe UI", sans-serif;
 }
 
+body.terms-page {
+  overflow: auto;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -209,6 +213,17 @@ a {
   margin-top: 22px;
 }
 
+.legal-links {
+  margin: 12px 0 0;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 0.94rem;
+}
+
+.legal-links a {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
 .download-pill,
 .value-strip span {
   border-radius: 999px;
@@ -353,6 +368,70 @@ a {
   filter: drop-shadow(0 24px 54px rgba(42, 12, 97, 0.28));
 }
 
+.terms-shell {
+  gap: 24px;
+}
+
+.terms-content {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 36px;
+}
+
+.terms-card {
+  width: min(100%, 860px);
+  padding: clamp(22px, 3vw, 40px);
+  border-radius: 32px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.05)),
+    rgba(17, 9, 43, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 30px 90px rgba(52, 18, 112, 0.18);
+}
+
+.terms-card h1 {
+  margin: 0;
+  font-family: "Sora", "Avenir Next", sans-serif;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.terms-intro {
+  margin: 16px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1rem;
+}
+
+.terms-section {
+  margin-top: 24px;
+}
+
+.terms-section h2 {
+  margin: 0 0 10px;
+  font-family: "Sora", "Avenir Next", sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: -0.03em;
+}
+
+.terms-section p,
+.terms-section li {
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.terms-section ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.terms-email {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
 @keyframes rise-in {
   from {
     opacity: 0;
@@ -437,6 +516,26 @@ a {
   .showcase-stage {
     height: clamp(250px, 42vh, 420px);
     max-width: min(100%, 220px);
+  }
+
+  .legal-links {
+    margin-top: 10px;
+    font-size: 0.86rem;
+  }
+
+  .terms-card {
+    padding: 20px 16px;
+    border-radius: 24px;
+  }
+
+  .terms-section {
+    margin-top: 20px;
+  }
+
+  .terms-section p,
+  .terms-section li {
+    font-size: 0.92rem;
+    line-height: 1.52;
   }
 }
 
