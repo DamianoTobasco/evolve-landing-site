@@ -208,9 +208,9 @@ a {
 }
 
 .download-pill,
-.availability-pill,
 .value-strip span,
-.stage-chip {
+.feature-rotator,
+.feature-dot {
   border-radius: 999px;
 }
 
@@ -253,19 +253,6 @@ a {
   letter-spacing: -0.05em;
 }
 
-.availability-pill {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 16px;
-  min-height: 62px;
-  background: rgba(19, 9, 46, 0.16);
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  color: rgba(255, 255, 255, 0.92);
-  font-weight: 700;
-  backdrop-filter: blur(14px);
-}
-
 .value-strip {
   display: flex;
   flex-wrap: wrap;
@@ -289,6 +276,7 @@ a {
   flex: 1;
   min-height: clamp(300px, 44vh, 620px);
   isolation: isolate;
+  perspective: 1800px;
   animation: rise-in 0.95s ease 0.1s both;
 }
 
@@ -330,12 +318,15 @@ a {
 
 .poster-card {
   position: absolute;
+  left: 50%;
   bottom: 0;
   overflow: hidden;
   border-radius: 32px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   box-shadow: var(--card-shadow);
   background: rgba(0, 0, 0, 0.12);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
 }
 
 .poster-card img {
@@ -345,76 +336,76 @@ a {
 }
 
 .poster-main,
-.poster-left,
-.poster-right,
-.poster-back {
+.poster-track,
+.poster-scan,
+.poster-meditate {
   aspect-ratio: 1290 / 2796;
 }
 
-.poster-main {
-  left: 50%;
-  z-index: 4;
+.poster-main,
+.poster-track,
+.poster-scan,
+.poster-meditate {
   height: 92%;
   width: auto;
-  transform: translateX(-50%);
-}
-
-.poster-left {
-  left: clamp(12px, 9vw, 130px);
-  bottom: clamp(12px, 2vh, 26px);
-  z-index: 2;
-  height: 72%;
-  width: auto;
-  transform: rotate(-10deg);
-}
-
-.poster-right {
-  right: clamp(12px, 9vw, 130px);
-  bottom: clamp(12px, 2vh, 26px);
   z-index: 3;
-  height: 72%;
-  width: auto;
-  transform: rotate(10deg);
+  transform: translateX(-50%) rotateY(-90deg) scale(0.9);
+  opacity: 0;
+  animation: feature-flip 24s infinite both;
 }
 
-.poster-back {
-  top: clamp(0px, 2vh, 26px);
-  bottom: auto;
-  right: clamp(18%, 24vw, 280px);
-  z-index: 1;
-  height: 60%;
-  width: auto;
-  transform: rotate(7deg);
-  opacity: 0.95;
+.poster-fridge {
+  animation-delay: 0s;
 }
 
-.stage-chip {
+.poster-track {
+  animation-delay: 6s;
+}
+
+.poster-scan {
+  animation-delay: 12s;
+}
+
+.poster-meditate {
+  animation-delay: 18s;
+}
+
+.feature-rotator {
   position: absolute;
-  z-index: 5;
-  padding: 12px 16px;
-  background: rgba(255, 255, 255, 0.86);
-  color: #0f0820;
-  font-weight: 700;
-  box-shadow: 0 18px 38px rgba(67, 24, 153, 0.18);
-}
-
-.stage-chip-left {
-  left: clamp(10px, 11vw, 140px);
-  top: 26%;
-}
-
-.stage-chip-right {
-  right: clamp(10px, 11vw, 140px);
-  top: 36%;
-}
-
-.stage-chip-bottom {
   left: 50%;
-  bottom: 2%;
+  top: 4%;
+  z-index: 5;
+  display: inline-flex;
+  gap: 8px;
+  padding: 10px 12px;
   transform: translateX(-50%);
-  background: rgba(18, 10, 44, 0.72);
-  color: rgba(255, 255, 255, 0.96);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(18, 10, 44, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(14px);
+}
+
+.feature-dot {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.36);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  animation: feature-dot-cycle 24s infinite both;
+}
+
+.feature-dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.feature-dot:nth-child(2) {
+  animation-delay: 6s;
+}
+
+.feature-dot:nth-child(3) {
+  animation-delay: 12s;
+}
+
+.feature-dot:nth-child(4) {
+  animation-delay: 18s;
 }
 
 @keyframes rise-in {
@@ -429,14 +420,50 @@ a {
   }
 }
 
+@keyframes feature-flip {
+  0%,
+  17% {
+    opacity: 1;
+    transform: translateX(-50%) rotateY(0deg) scale(1);
+  }
+
+  22%,
+  25% {
+    opacity: 0;
+    transform: translateX(-50%) rotateY(90deg) scale(0.92);
+  }
+
+  25.01%,
+  92% {
+    opacity: 0;
+    transform: translateX(-50%) rotateY(-90deg) scale(0.9);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) rotateY(-90deg) scale(0.9);
+  }
+}
+
+@keyframes feature-dot-cycle {
+  0%,
+  17% {
+    background: rgba(255, 255, 255, 0.96);
+    transform: scale(1.18);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  }
+
+  22%,
+  100% {
+    background: rgba(255, 255, 255, 0.36);
+    transform: scale(1);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+}
+
 @media (max-width: 1080px) {
   .hero-copy h1 {
     font-size: clamp(2.8rem, 9vw, 5.8rem);
-  }
-
-  .poster-back {
-    right: 18%;
-    height: 54%;
   }
 }
 
@@ -485,11 +512,6 @@ a {
     padding: 15px 22px;
   }
 
-  .availability-pill {
-    min-height: 52px;
-    padding: 0 14px;
-  }
-
   .value-strip {
     gap: 8px;
     margin-top: 14px;
@@ -505,39 +527,16 @@ a {
     min-height: clamp(270px, 40vh, 470px);
   }
 
-  .poster-main {
+  .poster-main,
+  .poster-track,
+  .poster-scan,
+  .poster-meditate {
     height: 88%;
   }
 
-  .poster-left {
-    left: 2%;
-    height: 62%;
-    bottom: 4%;
-  }
-
-  .poster-right {
-    right: 2%;
-    height: 62%;
-    bottom: 4%;
-  }
-
-  .poster-back {
-    display: none;
-  }
-
-  .stage-chip {
-    padding: 9px 12px;
-    font-size: 0.74rem;
-  }
-
-  .stage-chip-left {
-    top: 30%;
-    left: 3%;
-  }
-
-  .stage-chip-right {
-    top: 40%;
-    right: 3%;
+  .feature-rotator {
+    top: 2%;
+    padding: 8px 10px;
   }
 }
 
@@ -555,7 +554,10 @@ a {
     margin-top: 18px;
   }
 
-  .poster-main {
+  .poster-main,
+  .poster-track,
+  .poster-scan,
+  .poster-meditate {
     height: 89%;
   }
 }
@@ -603,31 +605,46 @@ a {
     font-size: 1.28rem;
   }
 
-  .availability-pill {
-    min-height: 48px;
-  }
-
-  .poster-main {
+  .poster-main,
+  .poster-track,
+  .poster-scan,
+  .poster-meditate {
     height: 86%;
   }
 
-  .poster-left,
-  .poster-right {
-    height: 58%;
+  .feature-rotator {
+    top: 1%;
+    padding: 7px 9px;
   }
 
-  .poster-back {
+  .feature-dot {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .poster-main,
+  .poster-track,
+  .poster-scan,
+  .poster-meditate,
+  .feature-dot {
+    animation: none;
+  }
+
+  .poster-main {
+    opacity: 1;
+    transform: translateX(-50%) rotateY(0deg) scale(1);
+  }
+
+  .poster-track,
+  .poster-scan,
+  .poster-meditate {
     display: none;
   }
 
-  .stage-chip-left,
-  .stage-chip-right {
-    display: none;
-  }
-
-  .stage-chip-bottom {
-    bottom: 1%;
-    padding: 9px 12px;
-    font-size: 0.74rem;
+  .feature-dot:first-child {
+    background: rgba(255, 255, 255, 0.96);
+    transform: scale(1.18);
   }
 }
