@@ -170,7 +170,7 @@ a {
   flex-direction: column;
   align-items: center;
   gap: 0;
-  max-width: 900px;
+  max-width: 760px;
   text-align: center;
   animation: rise-in 0.8s ease both;
 }
@@ -190,7 +190,7 @@ a {
 .hero-copy h1 {
   margin: 0;
   font-family: "Sora", "Avenir Next", sans-serif;
-  font-size: clamp(3rem, 6.8vw, 5.8rem);
+  font-size: clamp(2.7rem, 5.8vw, 4.9rem);
   line-height: 0.94;
   letter-spacing: -0.08em;
   text-shadow: 0 8px 30px rgba(58, 31, 126, 0.24);
@@ -198,11 +198,11 @@ a {
 }
 
 .lede {
-  max-width: 40rem;
-  margin: 14px 0 0;
+  max-width: 34rem;
+  margin: 12px 0 0;
   color: var(--muted);
-  font-size: clamp(0.98rem, 1.5vw, 1.1rem);
-  line-height: 1.42;
+  font-size: clamp(0.94rem, 1.2vw, 1rem);
+  line-height: 1.38;
 }
 
 .hero-actions {
@@ -210,13 +210,13 @@ a {
   flex-wrap: wrap;
   justify-content: center;
   gap: 12px;
-  margin-top: 18px;
+  margin-top: 16px;
 }
 
 .legal-links {
-  margin: 10px 0 0;
+  margin: 8px 0 0;
   color: rgba(255, 255, 255, 0.84);
-  font-size: 0.9rem;
+  font-size: 0.86rem;
 }
 
 .legal-links span {
@@ -278,7 +278,7 @@ a {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  margin-top: 16px;
+  margin-top: 14px;
 }
 
 .value-strip span {
@@ -292,9 +292,9 @@ a {
 
 .poster-stage {
   position: relative;
-  width: min(100%, 980px);
+  width: min(100%, 1120px);
   flex: 1;
-  min-height: clamp(340px, 58vh, 760px);
+  min-height: clamp(420px, 72vh, 980px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -330,8 +330,8 @@ a {
 .stage-floor {
   left: 50%;
   bottom: 5%;
-  width: min(72%, 620px);
-  height: 18%;
+  width: min(76%, 760px);
+  height: 20%;
   transform: translateX(-50%);
   border-radius: 50%;
   background: radial-gradient(circle, rgba(49, 15, 116, 0.28), transparent 72%);
@@ -341,10 +341,10 @@ a {
 .showcase-stage {
   position: relative;
   z-index: 3;
-  height: clamp(360px, 68vh, 860px);
+  height: clamp(460px, 82vh, 1100px);
   aspect-ratio: 1290 / 2796;
   width: auto;
-  max-width: min(100%, 380px);
+  max-width: min(100%, 460px);
   margin-inline: auto;
 }
 
@@ -370,7 +370,7 @@ a {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 34px 72px rgba(42, 12, 97, 0.22));
+  filter: drop-shadow(0 40px 90px rgba(42, 12, 97, 0.2));
 }
 
 .terms-shell {
@@ -455,17 +455,17 @@ a {
 
 @media (max-width: 1080px) {
   .hero-copy h1 {
-    font-size: clamp(2.8rem, 7.8vw, 5rem);
+    font-size: clamp(2.5rem, 6.6vw, 4.5rem);
   }
 
   .poster-stage {
-    width: min(100%, 760px);
-    min-height: clamp(300px, 52vh, 640px);
+    width: min(100%, 880px);
+    min-height: clamp(380px, 64vh, 820px);
   }
 
   .showcase-stage {
-    height: clamp(320px, 58vh, 700px);
-    max-width: min(100%, 330px);
+    height: clamp(420px, 72vh, 900px);
+    max-width: min(100%, 400px);
   }
 }
 
@@ -496,14 +496,14 @@ a {
   }
 
   .hero-copy h1 {
-    font-size: clamp(2rem, 9.2vw, 3rem);
+    font-size: clamp(1.8rem, 8.4vw, 2.7rem);
   }
 
   .lede {
-    margin-top: 8px;
-    max-width: 18.5rem;
-    font-size: 0.8rem;
-    line-height: 1.28;
+    margin-top: 7px;
+    max-width: 17rem;
+    font-size: 0.76rem;
+    line-height: 1.24;
   }
 
   .hero-actions {
@@ -523,14 +523,14 @@ a {
   }
 
   .poster-stage {
-    width: min(100%, 320px);
-    min-height: clamp(320px, 48vh, 520px);
-    margin-top: 4px;
+    width: min(100%, 360px);
+    min-height: clamp(380px, 56vh, 620px);
+    margin-top: 6px;
   }
 
   .showcase-stage {
-    height: clamp(320px, 48vh, 520px);
-    max-width: min(100%, 250px);
+    height: clamp(380px, 56vh, 620px);
+    max-width: min(100%, 290px);
   }
 
   .legal-links {
@@ -556,25 +556,25 @@ a {
 
 @media (max-height: 860px) {
   .hero-copy h1 {
-    font-size: clamp(2.5rem, 6.4vw, 4.8rem);
+    font-size: clamp(2.2rem, 5.6vw, 4.2rem);
   }
 
   .lede {
-    max-width: 38rem;
-    margin-top: 12px;
+    max-width: 32rem;
+    margin-top: 10px;
   }
 
   .hero-actions {
-    margin-top: 16px;
+    margin-top: 14px;
   }
 
   .poster-stage {
-    min-height: clamp(260px, 50vh, 620px);
+    min-height: clamp(360px, 64vh, 760px);
   }
 
   .showcase-stage {
-    height: clamp(260px, 50vh, 620px);
-    max-width: min(100%, 300px);
+    height: clamp(400px, 72vh, 860px);
+    max-width: min(100%, 380px);
   }
 }
 
@@ -595,14 +595,14 @@ a {
   }
 
   .hero-copy h1 {
-    font-size: clamp(1.9rem, 5.8vw, 3.7rem);
+    font-size: clamp(1.7rem, 4.9vw, 3.2rem);
   }
 
   .lede {
-    margin-top: 7px;
-    max-width: 29rem;
-    font-size: 0.78rem;
-    line-height: 1.24;
+    margin-top: 6px;
+    max-width: 25rem;
+    font-size: 0.72rem;
+    line-height: 1.18;
   }
 
   .value-strip {
@@ -610,7 +610,7 @@ a {
   }
 
   .hero-actions {
-    margin-top: 10px;
+    margin-top: 8px;
   }
 
   .download-pill {
@@ -622,12 +622,12 @@ a {
   }
 
   .poster-stage {
-    min-height: clamp(220px, 42vh, 440px);
+    min-height: clamp(300px, 58vh, 620px);
   }
 
   .showcase-stage {
-    height: clamp(220px, 42vh, 440px);
-    max-width: min(100%, 220px);
+    height: clamp(320px, 66vh, 680px);
+    max-width: min(100%, 300px);
   }
 }
 
