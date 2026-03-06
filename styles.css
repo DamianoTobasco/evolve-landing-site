@@ -210,9 +210,7 @@ a {
 }
 
 .download-pill,
-.value-strip span,
-.feature-rotator,
-.feature-dot {
+.value-strip span {
   border-radius: 999px;
 }
 
@@ -274,9 +272,9 @@ a {
 
 .poster-stage {
   position: relative;
-  width: min(100%, 640px);
+  width: min(100%, 760px);
   flex: 1;
-  min-height: clamp(280px, 40vh, 560px);
+  min-height: clamp(260px, 46vh, 620px);
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -320,157 +318,39 @@ a {
   filter: blur(16px);
 }
 
-.showcase-shell {
+.showcase-stage {
   position: relative;
   z-index: 3;
-  width: min(100%, 420px);
-  display: grid;
-  gap: 14px;
-  padding: 18px;
-  border-radius: 34px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.04)),
-    rgba(29, 12, 70, 0.16);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  backdrop-filter: blur(18px);
-  box-shadow: 0 28px 80px rgba(64, 23, 145, 0.18);
-}
-
-.showcase-topline {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.showcase-kicker {
-  color: rgba(255, 255, 255, 0.78);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-.feature-rotator {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.feature-dot {
-  width: 8px;
-  height: 8px;
-  background: rgba(255, 255, 255, 0.34);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
-  transition:
-    width 240ms ease,
-    background-color 240ms ease,
-    box-shadow 240ms ease,
-    transform 240ms ease;
-}
-
-.feature-dot.is-active {
-  width: 24px;
-  background: rgba(255, 255, 255, 0.96);
-  box-shadow: 0 0 18px rgba(255, 255, 255, 0.38);
-}
-
-.showcase-copy {
-  display: grid;
-  gap: 6px;
-  justify-items: center;
-  min-height: 64px;
-  text-align: center;
-}
-
-.showcase-label {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.72);
-  font-size: 0.86rem;
-}
-
-.showcase-title-wrap {
-  position: relative;
-  width: 100%;
-  min-height: 2.6rem;
-}
-
-.showcase-title {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transform: translateY(12px);
-  transition:
-    opacity 380ms ease,
-    transform 380ms ease;
-  font-family: "Sora", "Avenir Next", sans-serif;
-  font-size: clamp(1.3rem, 2vw, 1.8rem);
-  font-weight: 700;
-  letter-spacing: -0.05em;
-}
-
-.showcase-title.is-active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.showcase-frame {
-  position: relative;
-  width: min(100%, 280px);
-  margin: 0 auto;
+  height: clamp(260px, 50vh, 560px);
   aspect-ratio: 1290 / 2796;
-  padding: 8px;
-  border-radius: 34px;
-  background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.04)),
-    linear-gradient(180deg, rgba(18, 10, 44, 0.9), rgba(7, 2, 20, 1));
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: var(--card-shadow);
-}
-
-.showcase-frame::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent 32%, transparent 68%, rgba(255, 255, 255, 0.06));
-  pointer-events: none;
-}
-
-.showcase-screen {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  border-radius: 26px;
-  background: #08050f;
+  width: auto;
+  max-width: min(100%, 300px);
+  margin-inline: auto;
 }
 
 .showcase-slide {
   position: absolute;
   inset: 0;
   opacity: 0;
-  transform: scale(1.03);
-  filter: saturate(0.96);
+  transform: translateY(18px) scale(0.98);
+  filter: saturate(0.97);
   transition:
-    opacity 620ms ease,
-    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1),
-    filter 620ms ease;
+    opacity 560ms ease,
+    transform 900ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 560ms ease;
 }
 
 .showcase-slide.is-active {
   opacity: 1;
-  transform: scale(1);
+  transform: translateY(0) scale(1);
   filter: saturate(1);
 }
 
 .showcase-slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  filter: drop-shadow(0 24px 54px rgba(42, 12, 97, 0.28));
 }
 
 @keyframes rise-in {
@@ -522,84 +402,41 @@ a {
   }
 
   .hero-copy h1 {
-    font-size: clamp(2.35rem, 11vw, 3.75rem);
+    font-size: clamp(2.2rem, 10vw, 3.45rem);
   }
 
   .lede {
-    margin-top: 10px;
-    max-width: 22rem;
-    font-size: 0.9rem;
-    line-height: 1.34;
+    margin-top: 8px;
+    max-width: 20rem;
+    font-size: 0.84rem;
+    line-height: 1.3;
   }
 
   .hero-actions {
     width: 100%;
-    margin-top: 14px;
+    margin-top: 12px;
   }
 
   .download-pill {
     width: 100%;
     min-width: 0;
-    max-width: 320px;
-    padding: 14px 20px;
+    max-width: 280px;
+    padding: 13px 18px;
   }
 
   .value-strip {
-    gap: 8px;
-    margin-top: 12px;
-    max-width: 340px;
-  }
-
-  .value-strip span {
-    padding: 7px 10px;
-    font-size: 0.72rem;
+    display: none;
   }
 
   .poster-stage {
-    width: min(100%, 360px);
-    min-height: clamp(240px, 36vh, 410px);
-    margin-top: 4px;
+    width: min(100%, 280px);
+    min-height: clamp(250px, 42vh, 420px);
+    margin-top: 2px;
   }
 
-  .showcase-shell {
-    gap: 10px;
-    padding: 14px;
-    border-radius: 28px;
-  }
-
-  .showcase-topline {
-    gap: 10px;
-  }
-
-  .showcase-kicker {
-    font-size: 0.64rem;
-    letter-spacing: 0.14em;
-  }
-
-  .showcase-copy {
-    min-height: 50px;
-  }
-
-  .showcase-label {
-    font-size: 0.76rem;
-  }
-
-  .showcase-title-wrap {
-    min-height: 2rem;
-  }
-
-  .showcase-title {
-    font-size: 1.15rem;
-  }
-
-  .showcase-frame {
-    width: min(100%, 210px);
-    padding: 6px;
-    border-radius: 28px;
-  }
-
-  .showcase-screen {
-    border-radius: 21px;
+  .showcase-stage {
+    height: clamp(250px, 42vh, 420px);
+    max-width: min(100%, 220px);
   }
 }
 
@@ -618,7 +455,11 @@ a {
   }
 
   .poster-stage {
-    min-height: clamp(260px, 36vh, 480px);
+    min-height: clamp(220px, 38vh, 470px);
+  }
+
+  .showcase-stage {
+    height: clamp(220px, 38vh, 470px);
   }
 }
 
@@ -666,31 +507,17 @@ a {
   }
 
   .poster-stage {
-    min-height: clamp(220px, 34vh, 360px);
+    min-height: clamp(180px, 32vh, 320px);
   }
 
-  .showcase-shell {
-    gap: 8px;
-    padding: 12px;
-  }
-
-  .showcase-copy {
-    min-height: 40px;
-  }
-
-  .showcase-title {
-    font-size: 1rem;
-  }
-
-  .showcase-frame {
-    width: min(100%, 176px);
+  .showcase-stage {
+    height: clamp(180px, 32vh, 320px);
+    max-width: min(100%, 176px);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .showcase-slide,
-  .showcase-title,
-  .feature-dot {
+  .showcase-slide {
     transition: none;
   }
 }

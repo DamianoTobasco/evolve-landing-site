@@ -1,25 +1,15 @@
 const SHOWCASE_INTERVAL_MS = 3600;
 
 const slides = Array.from(document.querySelectorAll("[data-slide]"));
-const captions = Array.from(document.querySelectorAll("[data-caption]"));
-const dots = Array.from(document.querySelectorAll("[data-dot]"));
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-if (slides.length && slides.length === captions.length && slides.length === dots.length) {
+if (slides.length) {
   let activeIndex = 0;
   let intervalId = null;
 
   const setActive = (nextIndex) => {
     slides.forEach((slide, index) => {
       slide.classList.toggle("is-active", index === nextIndex);
-    });
-
-    captions.forEach((caption, index) => {
-      caption.classList.toggle("is-active", index === nextIndex);
-    });
-
-    dots.forEach((dot, index) => {
-      dot.classList.toggle("is-active", index === nextIndex);
     });
 
     activeIndex = nextIndex;
