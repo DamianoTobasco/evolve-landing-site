@@ -219,6 +219,11 @@ a {
   font-size: 0.94rem;
 }
 
+.legal-links span {
+  margin: 0 0.5rem;
+  opacity: 0.72;
+}
+
 .legal-links a {
   text-decoration: underline;
   text-underline-offset: 0.18em;
@@ -430,6 +435,10 @@ a {
 .terms-email {
   text-decoration: underline;
   text-underline-offset: 0.18em;
+}
+
+.terms-links {
+  margin-top: 26px;
 }
 
 @keyframes rise-in {
