@@ -455,6 +455,172 @@ a {
   margin-top: 26px;
 }
 
+.support-card {
+  width: min(100%, 980px);
+}
+
+.support-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 380px);
+  gap: 24px;
+  align-items: start;
+}
+
+.support-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.support-direct,
+.support-note,
+.support-form-card {
+  border-radius: 26px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04)),
+    rgba(13, 7, 34, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(16px);
+}
+
+.support-direct {
+  margin-top: 22px;
+  padding: 18px 20px;
+}
+
+.support-label {
+  margin: 0 0 8px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.support-email-link {
+  font-family: "Sora", "Avenir Next", sans-serif;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.support-notes {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.support-note {
+  padding: 18px 20px;
+}
+
+.support-note h2 {
+  margin: 0 0 8px;
+  font-family: "Sora", "Avenir Next", sans-serif;
+  font-size: 1rem;
+  letter-spacing: -0.03em;
+}
+
+.support-note p,
+.support-form-note {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
+.support-form-card {
+  padding: 18px;
+  box-shadow: 0 26px 60px rgba(52, 18, 112, 0.14);
+}
+
+.support-form {
+  display: grid;
+  gap: 14px;
+}
+
+.support-form label {
+  display: grid;
+  gap: 8px;
+}
+
+.support-form span {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.support-form input,
+.support-form select,
+.support-form textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 16px;
+  background: rgba(9, 4, 24, 0.36);
+  color: #fff;
+  font: inherit;
+  outline: none;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    background-color 160ms ease;
+}
+
+.support-form input::placeholder,
+.support-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.46);
+}
+
+.support-form input:focus,
+.support-form select:focus,
+.support-form textarea:focus {
+  border-color: rgba(255, 255, 255, 0.42);
+  background: rgba(9, 4, 24, 0.48);
+  box-shadow: 0 0 0 4px rgba(181, 206, 255, 0.08);
+}
+
+.support-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.support-submit {
+  margin-top: 4px;
+  padding: 14px 18px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--text-dark);
+  font-family: "Sora", "Avenir Next", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  cursor: pointer;
+  box-shadow:
+    0 22px 44px rgba(67, 24, 153, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.support-submit:hover,
+.support-submit:focus-visible {
+  transform: translateY(-2px);
+  box-shadow:
+    0 28px 52px rgba(67, 24, 153, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96);
+}
+
+.support-form-note {
+  margin-top: 14px;
+}
+
+.support-form-note a {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
 @keyframes rise-in {
   from {
     opacity: 0;
@@ -565,6 +731,31 @@ a {
   .terms-section li {
     font-size: 0.92rem;
     line-height: 1.52;
+  }
+
+  .support-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .support-form-card,
+  .support-direct,
+  .support-note {
+    border-radius: 22px;
+  }
+
+  .support-form-card {
+    padding: 16px;
+  }
+
+  .support-email-link {
+    font-size: 1.12rem;
+  }
+
+  .support-note p,
+  .support-form-note {
+    font-size: 0.9rem;
+    line-height: 1.55;
   }
 }
 
