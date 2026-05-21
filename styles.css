@@ -157,6 +157,12 @@ a {
   color: rgba(255, 255, 255, 0.8);
 }
 
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .topbar-link {
   padding: 12px 18px;
   border-radius: 999px;
@@ -166,6 +172,10 @@ a {
   font-weight: 700;
   color: rgba(255, 255, 255, 0.98);
   box-shadow: 0 14px 32px rgba(62, 23, 137, 0.16);
+}
+
+.topbar-link-secondary {
+  background: rgba(18, 10, 44, 0.16);
 }
 
 .hero {
@@ -228,13 +238,16 @@ a {
 }
 
 .legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem 0.5rem;
   margin: 8px 0 0;
   color: rgba(255, 255, 255, 0.84);
   font-size: 0.86rem;
 }
 
 .legal-links span {
-  margin: 0 0.5rem;
   opacity: 0.72;
 }
 
@@ -658,7 +671,7 @@ a {
   }
 
   .brand-tag,
-  .topbar-link {
+  .topbar-actions {
     display: none;
   }
 
