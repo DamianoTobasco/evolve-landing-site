@@ -47,6 +47,15 @@ body.terms-page {
   background-attachment: scroll;
 }
 
+/* Keep the full privacy policy readable as its length grows. */
+body.privacy-page {
+  background-attachment: fixed;
+}
+
+.privacy-page .terms-card {
+  background: #211747;
+}
+
 body.terms-page .background-haze,
 body.terms-page .background-rings {
   display: none;
