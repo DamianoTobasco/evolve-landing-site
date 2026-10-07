@@ -1,135 +1,572 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover"
-    />
-    <title>Evolve | All-in-One Health App</title>
-    <meta
-      name="description"
-      content="Download Evolve on the App Store. Calories, cardio, AI food scan, meditation, and smarter health routines in one app."
-    />
-    <link rel="icon" type="image/svg+xml" href="assets/evolve-app-icon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="site.js" defer></script>
-  </head>
-  <body>
-    <div class="background-haze background-haze-a" aria-hidden="true"></div>
-    <div class="background-haze background-haze-b" aria-hidden="true"></div>
-    <div class="background-rings" aria-hidden="true"></div>
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Evolve: Fitness Quest — Level up your real life</title>
+  <meta name="description" content="Evolve turns workouts, cardio, meals and meditation into XP, levels and a 40-stage Journey. Track it all in one iPhone app and watch your real-life effort level you up.">
+  <meta name="theme-color" content="#07050f">
+  <script>document.documentElement.className = "js";</script>
+  <link rel="canonical" href="https://theevolve.app/">
 
-    <div class="site-shell">
-      <header class="topbar">
-        <a class="brand" href="./" aria-label="Evolve landing page">
-          <span class="brand-mark">
-            <img src="assets/evolve-app-icon.svg" alt="Evolve app icon" />
-          </span>
-          <span class="brand-copy">
-            <span class="brand-name">Evolve</span>
-            <span class="brand-tag">All-in-one health app</span>
-          </span>
-        </a>
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://theevolve.app/">
+  <meta property="og:title" content="Evolve: Fitness Quest — Small wins. Big evolution.">
+  <meta property="og:description" content="Workouts, cardio, nutrition and meditation in one app — and every bit of it earns XP toward your next level.">
+  <meta property="og:image" content="https://theevolve.app/assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="apple-itunes-app" content="app-id=6743642232">
 
-        <nav class="topbar-actions" aria-label="Primary">
-          <a class="topbar-link topbar-link-secondary" href="creators/">
-            Creator Program
-          </a>
-          <a
-            class="topbar-link"
-            href="https://apps.apple.com/us/app/evolve-calorie-tracker/id6743642232"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Download
-          </a>
-        </nav>
-      </header>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
-      <main class="hero">
-        <section class="hero-copy">
-          <p class="eyebrow">HEALTH. CARDIO. NUTRITION. MIND.</p>
-          <h1>Evolve your health in one place.</h1>
-          <p class="lede">
-            Evolve combines calorie tracking, AI food scan, cardio insights,
-            meditation, and smart routine support in a single iPhone app.
-          </p>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="home.css">
+  <link rel="preload" as="image" href="assets/screens/home.webp">
+</head>
+<body>
 
-          <div class="hero-actions">
-            <a
-              class="download-pill"
-              href="https://apps.apple.com/us/app/evolve-calorie-tracker/id6743642232"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Download Evolve on the App Store"
-            >
-              <span class="download-kicker">Available now on</span>
-              <span class="download-title">The App Store</span>
-            </a>
-          </div>
+<!-- Icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></symbol>
+    <symbol id="i-dumbbell" viewBox="0 0 24 24"><path d="m6.5 6.5 11 11"/><path d="m21 21-1-1"/><path d="m3 3 1 1"/><path d="m18 22 4-4"/><path d="m2 6 4-4"/><path d="m3 10 7-7"/><path d="m14 21 7-7"/></symbol>
+    <symbol id="i-utensils" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></symbol>
+    <symbol id="i-activity" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v3"/></symbol>
+    <symbol id="i-barcode" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M8 7v10"/><path d="M12 7v10"/><path d="M16 7v10"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"/><path d="M15 5.764v15"/><path d="M9 3.236v15"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+    <symbol id="i-droplet" viewBox="0 0 24 24"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></symbol>
+    <symbol id="i-timer" viewBox="0 0 24 24"><path d="M10 2h4"/><path d="m12 14 3-3"/><circle cx="12" cy="14" r="8"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></symbol>
+    <symbol id="i-swords" viewBox="0 0 24 24"><path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="m13 19 6-6"/><path d="m16 16 4 4"/><path d="m19 21 2-2"/><path d="M14.5 6.5 18 3h3v3l-3.5 3.5"/><path d="m5 14 4 4"/><path d="m7 17-3 3"/><path d="m3 19 2 2"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-rotate" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect width="7" height="7" x="3" y="3" rx="1.5"/><rect width="7" height="7" x="14" y="3" rx="1.5"/><rect width="7" height="7" x="14" y="14" rx="1.5"/><rect width="7" height="7" x="3" y="14" rx="1.5"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="m16 6-4-4-4 4"/><path d="M12 2v13"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></symbol>
+    <symbol id="i-headphones" viewBox="0 0 24 24"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></symbol>
+    <symbol id="i-youtube" viewBox="0 0 24 24"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></symbol>
+    <symbol id="i-tiktok" viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0 4 4V2c.5 2.5 2.6 4.6 5.5 5"/></symbol>
+    <symbol id="i-apple" viewBox="0 0 24 24"><path stroke="none" fill="currentColor" d="M16.37 1.43c0 1.14-.42 2.2-1.12 2.98-.84.94-2.2 1.66-3.3 1.57-.14-1.1.41-2.26 1.1-3 .78-.86 2.12-1.5 3.32-1.55ZM20.5 17.1c-.56 1.3-.83 1.88-1.55 3.03-1 1.6-2.42 3.6-4.18 3.62-1.56.01-1.96-1.02-4.08-1-2.12.01-2.56 1.02-4.12 1-1.76-.02-3.1-1.82-4.11-3.42-2.82-4.48-3.12-9.74-1.38-12.53 1.24-1.98 3.2-3.14 5.03-3.14 1.87 0 3.05 1.03 4.6 1.03 1.5 0 2.42-1.03 4.58-1.03 1.64 0 3.37.89 4.6 2.43-4.04 2.22-3.39 8 .61 10.01Z"/></symbol>
+  </defs>
+</svg>
 
-          <p class="legal-links">
-            <a href="support/">Support</a>
-            <span aria-hidden="true">•</span>
-            <a href="creators/">Creator Program</a>
-            <span aria-hidden="true">•</span>
-            <a href="terms.html">Terms &amp; Conditions</a>
-            <span aria-hidden="true">•</span>
-            <a href="privacy.html">Privacy Policy</a>
-          </p>
+<a class="skip" href="#main">Skip to content</a>
 
-          <div class="value-strip" aria-label="Core Evolve features">
-            <span>Calorie Tracking</span>
-            <span>AI Food Scan</span>
-            <span>Cardio</span>
-            <span>Meditation</span>
-            <span>Recipe Ideas</span>
-          </div>
-        </section>
-
-        <section class="poster-stage" aria-label="Evolve app feature preview">
-          <div class="stage-glow stage-glow-left" aria-hidden="true"></div>
-          <div class="stage-glow stage-glow-right" aria-hidden="true"></div>
-          <div class="stage-floor" aria-hidden="true"></div>
-
-          <div class="showcase-stage">
-            <div class="showcase-slide is-active" data-slide>
-              <img
-                src="assets/fridge-poster.jpg"
-                alt="Evolve fridge recipe suggestions feature"
-              />
-            </div>
-
-            <div class="showcase-slide" data-slide>
-              <img
-                src="assets/track-poster.jpg"
-                alt="Evolve calorie tracking feature poster"
-              />
-            </div>
-
-            <div class="showcase-slide" data-slide>
-              <img
-                src="assets/scan-poster.jpg"
-                alt="Evolve AI scan feature poster"
-              />
-            </div>
-
-            <div class="showcase-slide" data-slide>
-              <img
-                src="assets/meditate-poster.jpg"
-                alt="Evolve meditation feature poster"
-              />
-            </div>
-          </div>
-        </section>
-      </main>
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="/" aria-label="Evolve home">
+      <img src="assets/img/icon-256.png" alt="" width="34" height="34">
+      <span>Evolve</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#quests">Quests</a>
+      <a href="#journey">Journey</a>
+      <a href="#features">Features</a>
+      <a href="#fridge">Fridge AI</a>
+      <a href="#wardrobe">Wardrobe</a>
+    </nav>
+    <div class="nav-xp" aria-hidden="true" title="You earn XP for scrolling. Obviously.">
+      <span class="nav-lvl">LVL <b id="navLvl">1</b></span>
+      <span class="nav-bar"><i id="navBar"></i></span>
     </div>
-  </body>
+    <a class="btn btn-sm btn-light" href="https://apps.apple.com/us/app/evolve-calorie-tracker/id6743642232" data-store>
+      <svg class="ic ic-fill"><use href="#i-apple"/></svg> Download
+    </a>
+  </div>
+  <div class="lvl-toast" id="lvlToast" role="status" aria-live="polite"></div>
+</header>
+
+<main id="main">
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="aurora a1"></div><div class="aurora a2"></div><div class="aurora a3"></div>
+    <div class="stars"></div>
+    <div class="grid-floor"></div>
+  </div>
+
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="pill reveal"><span class="pill-dot"></span>Evolve: Fitness Quest · for iPhone</span>
+      <h1 class="reveal">Small wins.<br><span class="grad-text">Big evolution.</span></h1>
+      <p class="lead reveal">Evolve turns your workouts, walks, meals and mindful minutes into XP, levels and a 40‑stage Journey. Real effort, visible progress, and a few bosses to beat along the way.</p>
+      <div class="hero-cta reveal">
+        <a class="store-btn" href="https://apps.apple.com/us/app/evolve-calorie-tracker/id6743642232" data-store>
+          <svg class="ic ic-fill"><use href="#i-apple"/></svg>
+          <span><small>Download on the</small>App Store</span>
+        </a>
+        <a class="btn btn-ghost" href="#quests">Try a quest <svg class="ic"><use href="#i-down"/></svg></a>
+      </div>
+      <ul class="hero-facts reveal" aria-label="Evolve at a glance">
+        <li><b>5</b><span>stats to level</span></li>
+        <li><b>40</b><span>Journey stages</span></li>
+        <li><b>5</b><span>bosses to beat</span></li>
+        <li><b>24</b><span>activity types</span></li>
+      </ul>
+    </div>
+
+    <div class="hero-visual" id="heroVisual" aria-hidden="true">
+      <div class="halo"></div>
+      <div class="orbit o1"><i></i></div>
+      <div class="orbit o2"><i></i></div>
+      <img class="hero-mascot" src="assets/img/mascot.webp" alt="" width="473" height="1100" data-depth="0.5">
+      <div class="phone hero-phone" data-depth="0.25">
+        <div class="screen"><img src="assets/screens/home.webp" alt="" width="600" height="1304"></div>
+      </div>
+      <div class="hud hud-xp" data-depth="1.1">
+        <span class="hud-ico c-green"><svg class="ic"><use href="#i-dumbbell"/></svg></span>
+        <span><small>Workout complete</small><b class="mono">+50 XP</b></span>
+      </div>
+      <div class="hud hud-streak" data-depth="0.9">
+        <img src="assets/img/flame.png" alt="" width="21" height="24">
+        <span><small>Daily streak</small><b>Safe for today</b></span>
+      </div>
+      <div class="hud hud-stage" data-depth="1.4">
+        <span class="hud-num mono">18</span>
+        <span><small>Journey · Stage 18</small><b>Endurance Trial</b></span>
+      </div>
+      <div class="hud hud-stats" data-depth="0.7">
+        <span class="mini-stat"><i style="--c:var(--s-str);--v:.72"></i>STR</span>
+        <span class="mini-stat"><i style="--c:var(--s-car);--v:.9"></i>CAR</span>
+        <span class="mini-stat"><i style="--c:var(--s-mind);--v:.38"></i>MND</span>
+        <span class="mini-stat"><i style="--c:var(--s-nut);--v:.55"></i>NUT</span>
+        <span class="mini-stat"><i style="--c:var(--s-con);--v:.46"></i>CON</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Running</span><span>Walking</span><span>Hiking</span><span>Strength Training</span><span>Cycling</span><span>Yoga</span><span>HIIT</span><span>Rowing</span><span>Boxing Cardio</span><span>Swimming</span><span>Pilates</span><span>Trail Running</span><span>Paddleboarding</span><span>Jump Rope</span><span>Kayaking</span><span>Stair Climbing</span><span>Mountain Biking</span><span>Skating</span>
+      <span>Running</span><span>Walking</span><span>Hiking</span><span>Strength Training</span><span>Cycling</span><span>Yoga</span><span>HIIT</span><span>Rowing</span><span>Boxing Cardio</span><span>Swimming</span><span>Pilates</span><span>Trail Running</span><span>Paddleboarding</span><span>Jump Rope</span><span>Kayaking</span><span>Stair Climbing</span><span>Mountain Biking</span><span>Skating</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DAILY QUESTS ================= -->
+<section class="section" id="quests">
+  <div class="wrap split">
+    <div class="split-copy">
+      <span class="eyebrow reveal">01 · Daily quests</span>
+      <h2 class="reveal">Three small wins.<br>One very satisfying bar.</h2>
+      <p class="reveal">Every day, Evolve sets three quests: train, eat, breathe. Finish one and your streak is safe. Finish all three and watch the XP bar move. Go on, tap them.</p>
+      <ul class="ticks reveal">
+        <li><svg class="ic"><use href="#i-flame"/></svg><span><b>One quest keeps your streak alive.</b> A workout, a meal log or a meditation is enough.</span></li>
+        <li><svg class="ic"><use href="#i-bell"/></svg><span><b>Reminders when you want them.</b> Pick the times for workout, meal and water nudges.</span></li>
+        <li><svg class="ic"><use href="#i-grid"/></svg><span><b>Home Screen widgets</b> for progress, nutrition, cardio, food scan and water.</span></li>
+      </ul>
+    </div>
+
+    <div class="quest-card reveal" id="questCard">
+      <div class="qc-head">
+        <div>
+          <span class="mono qc-label">Daily quests</span>
+          <div class="qc-day">Day <b id="qDay">1</b></div>
+        </div>
+        <div class="qc-streak" id="qStreak" data-safe="false">
+          <img src="assets/img/flame.png" alt="" width="18" height="21">
+          <span id="qStreakText">Streak at risk</span>
+        </div>
+      </div>
+
+      <div class="quest-list">
+        <button class="quest" data-xp="50" data-stat="str">
+          <span class="q-check"><svg class="ic"><use href="#i-check"/></svg></span>
+          <span class="q-icon c-red"><svg class="ic"><use href="#i-dumbbell"/></svg></span>
+          <span class="q-text"><b>Complete a workout</b><small>Lift, run, ride, flow — it all counts</small></span>
+          <span class="q-xp mono">+50 XP</span>
+        </button>
+        <button class="quest" data-xp="25" data-stat="nut">
+          <span class="q-check"><svg class="ic"><use href="#i-check"/></svg></span>
+          <span class="q-icon c-orange"><svg class="ic"><use href="#i-utensils"/></svg></span>
+          <span class="q-text"><b>Log a meal</b><small>Photo, voice, barcode, search or manual</small></span>
+          <span class="q-xp mono">+25 XP</span>
+        </button>
+        <button class="quest" data-xp="30" data-stat="mind">
+          <span class="q-check"><svg class="ic"><use href="#i-check"/></svg></span>
+          <span class="q-icon c-blue"><svg class="ic"><use href="#i-sparkles"/></svg></span>
+          <span class="q-text"><b>Meditate</b><small>Even five minutes counts</small></span>
+          <span class="q-xp mono">+30 XP</span>
+        </button>
+      </div>
+
+      <div class="qc-xp">
+        <div class="qc-xp-top">
+          <span class="mono">LVL <b id="qLvl">1</b></span>
+          <span class="mono qc-xp-num"><b id="qXp">0</b> / 100 XP</span>
+        </div>
+        <div class="xpbar"><i id="qBar"></i><span class="xpbar-shine"></span></div>
+      </div>
+
+      <div class="qc-foot">
+        <span id="qMsg">Tap a quest to complete it.</span>
+        <button class="link-btn" id="qNext" hidden>Next day <svg class="ic"><use href="#i-arrow"/></svg></button>
+      </div>
+      <div class="levelup" id="levelUp" aria-hidden="true"><span>LEVEL UP!</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= JOURNEY + BOSSES ================= -->
+<section class="section section-journey" id="journey">
+  <div class="wrap">
+    <div class="center-head">
+      <span class="eyebrow reveal">02 · The Journey</span>
+      <h2 class="reveal">40 stages. 5 regions.<br><span class="grad-text warm">5 bosses who'd rather you didn't.</span></h2>
+      <p class="reveal">Climb from Awakening to Mythic. Every region ends in a boss stage, and the only way past is real life: workouts, streaks, meals and minutes of calm.</p>
+    </div>
+
+    <div class="journey-track reveal" id="journeyTrack" role="tablist" aria-label="Journey regions"></div>
+
+    <div class="arena reveal" id="arena">
+      <div class="arena-stage">
+        <div class="arena-glow"></div>
+        <div class="arena-floor"></div>
+        <div class="boss-wrap" id="bossWrap">
+          <img class="boss-img" id="bossImg" src="assets/bosses/couch-potato-king.webp" alt="The Couch Potato King" width="619" height="640">
+        </div>
+        <div class="dmg-layer" id="dmgLayer" aria-hidden="true"></div>
+        <div class="defeated-stamp" id="defeatStamp" aria-hidden="true">DEFEATED</div>
+      </div>
+
+      <div class="arena-info">
+        <div class="arena-top">
+          <span class="mono arena-region" id="bossRegion">Awakening · Stage 8</span>
+          <span class="mono arena-reward" id="bossReward">+500 XP</span>
+        </div>
+        <h3 id="bossName">Couch Potato King</h3>
+        <p class="boss-taunt" id="bossTaunt">“Just one more episode.”</p>
+
+        <div class="hp">
+          <div class="hp-top"><span class="mono">HP</span><span class="mono" id="hpNum">100 / 100</span></div>
+          <div class="hp-bar"><i id="hpBar"></i><b id="hpGhost"></b></div>
+        </div>
+
+        <div class="req">
+          <span class="mono req-label">To clear this stage in the app</span>
+          <ul id="bossReqs"></ul>
+        </div>
+
+        <div class="arena-actions">
+          <button class="btn btn-attack" id="attackBtn"><svg class="ic"><use href="#i-swords"/></svg><span id="attackLabel">Attack: log a workout</span></button>
+          <button class="btn btn-ghost btn-sm" id="rematchBtn" hidden><svg class="ic"><use href="#i-rotate"/></svg> Rematch</button>
+        </div>
+        <p class="fine">In the app, boss stages are milestones: hit the requirements in real life, then claim the victory. The button mashing is just for this page.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STATS ================= -->
+<section class="section" id="stats">
+  <div class="wrap split split-rev">
+    <div class="split-copy">
+      <span class="eyebrow reveal">03 · Your stats</span>
+      <h2 class="reveal">Five stats.<br><em>One</em> well‑rounded you.</h2>
+      <p class="reveal">Strength, Cardio, Mind, Nutrition and Consistency grow from what you actually do. Your profile turns them into a Balance Score and nudges you toward your lowest stat. Try a few moves and watch the shape change.</p>
+      <div class="stat-actions reveal" id="statActions">
+        <button data-s="0"><svg class="ic"><use href="#i-dumbbell"/></svg>Lift</button>
+        <button data-s="1"><svg class="ic"><use href="#i-activity"/></svg>Run</button>
+        <button data-s="2"><svg class="ic"><use href="#i-sparkles"/></svg>Meditate</button>
+        <button data-s="3"><svg class="ic"><use href="#i-utensils"/></svg>Log a meal</button>
+        <button data-s="4"><svg class="ic"><use href="#i-calendar"/></svg>Show up again</button>
+      </div>
+    </div>
+
+    <div class="stats-card reveal">
+      <div class="radar-wrap">
+        <svg class="radar" id="radar" viewBox="0 0 320 320" role="img" aria-label="Five-stat radar chart"></svg>
+        <div class="balance">
+          <span class="mono">Balance score</span>
+          <b id="balNum">40</b>
+          <small id="balHint">Focus on Mind</small>
+        </div>
+      </div>
+      <ul class="stat-rows" id="statRows"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FEATURES ================= -->
+<section class="section section-features" id="features">
+  <div class="wrap">
+    <div class="center-head">
+      <span class="eyebrow reveal">04 · The toolkit</span>
+      <h2 class="reveal">One app. The whole quest log.</h2>
+      <p class="reveal">Nutrition, training, cardio and meditation, all feeding the same XP bar. No more juggling five apps to see one day.</p>
+    </div>
+
+    <div class="tabs reveal" role="tablist" aria-label="Feature areas" id="featTabs">
+      <button role="tab" aria-selected="true" data-tab="0" style="--c:var(--s-nut)"><svg class="ic"><use href="#i-utensils"/></svg>Nutrition<i></i></button>
+      <button role="tab" aria-selected="false" data-tab="1" style="--c:var(--s-str)"><svg class="ic"><use href="#i-dumbbell"/></svg>Fitness<i></i></button>
+      <button role="tab" aria-selected="false" data-tab="2" style="--c:var(--s-car)"><svg class="ic"><use href="#i-activity"/></svg>Cardio<i></i></button>
+      <button role="tab" aria-selected="false" data-tab="3" style="--c:var(--s-mind)"><svg class="ic"><use href="#i-moon"/></svg>Mind<i></i></button>
+      <button role="tab" aria-selected="false" data-tab="4" style="--c:var(--s-con)"><svg class="ic"><use href="#i-trophy"/></svg>Progress<i></i></button>
+    </div>
+
+    <div class="feat-stage reveal">
+      <div class="feat-panels">
+        <div class="feat-panel active" role="tabpanel" data-panel="0">
+          <h3>Log food the way that's easiest right now.</h3>
+          <ul class="feat-list">
+            <li><span class="fi c-orange"><svg class="ic"><use href="#i-camera"/></svg></span><div><b>Snap your plate <em class="tag">Premium</em></b><p>Photograph a meal for estimated calories, protein, carbs and fat. Review the portion, then log.</p></div></li>
+            <li><span class="fi c-orange"><svg class="ic"><use href="#i-mic"/></svg></span><div><b>Just say it <em class="tag">Premium</em></b><p>Describe what you ate out loud instead of typing every item.</p></div></li>
+            <li><span class="fi c-orange"><svg class="ic"><use href="#i-barcode"/></svg></span><div><b>Barcode, search or manual</b><p>Scan a packaged food, search the database, or enter the label yourself.</p></div></li>
+            <li><span class="fi c-orange"><svg class="ic"><use href="#i-droplet"/></svg></span><div><b>Calories, macros and water</b><p>Your day by meal, with macro progress, hydration and a weekly calorie chart.</p></div></li>
+          </ul>
+        </div>
+        <div class="feat-panel" role="tabpanel" data-panel="1">
+          <h3>Walk into the gym with a plan.</h3>
+          <ul class="feat-list">
+            <li><span class="fi c-red"><svg class="ic"><use href="#i-sparkles"/></svg></span><div><b>Suggested sessions</b><p>Pick muscle groups, 30, 45, 60 or 90 minutes, and your level. Preview it, regenerate, or start.</p></div></li>
+            <li><span class="fi c-red"><svg class="ic"><use href="#i-dumbbell"/></svg></span><div><b>Log every set</b><p>Weight, reps and completed sets, with session time and total volume tracked as you go.</p></div></li>
+            <li><span class="fi c-red"><svg class="ic"><use href="#i-chart"/></svg></span><div><b>Muscle progress</b><p>See volume per muscle group, when you last trained it, and an estimated recovery read.</p></div></li>
+            <li><span class="fi c-red"><svg class="ic"><use href="#i-trophy"/></svg></span><div><b>Finish strong</b><p>Wrap a session and see your XP, level progress and any personal records.</p></div></li>
+          </ul>
+        </div>
+        <div class="feat-panel" role="tabpanel" data-panel="2">
+          <h3>Every walk counts as a quest.</h3>
+          <ul class="feat-list">
+            <li><span class="fi c-green"><svg class="ic"><use href="#i-activity"/></svg></span><div><b>GPS tracking</b><p>Runs, walks, hikes, rides, paddles and more, with route, distance, pace and elevation when available.</p></div></li>
+            <li><span class="fi c-green"><svg class="ic"><use href="#i-route"/></svg></span><div><b>Find or draw a route</b><p>Discover nearby routes by distance and difficulty, or tap out your own loop and save it.</p></div></li>
+            <li><span class="fi c-green"><svg class="ic"><use href="#i-phone"/></svg></span><div><b>Live Activities</b><p>Keep your session stats on the Lock Screen and Dynamic Island.</p></div></li>
+            <li><span class="fi c-green"><svg class="ic"><use href="#i-share"/></svg></span><div><b>Make the post</b><p>Turn a finished session into a photo with your stats, or export a transparent route overlay.</p></div></li>
+          </ul>
+        </div>
+        <div class="feat-panel" role="tabpanel" data-panel="3">
+          <h3>Make room for a five‑minute reset.</h3>
+          <ul class="feat-list">
+            <li><span class="fi c-blue"><svg class="ic"><use href="#i-headphones"/></svg></span><div><b>Sleep, Calm, Focus, Stress</b><p>Browse audio sessions by what you need, and favorite the ones you love.</p></div></li>
+            <li><span class="fi c-blue"><svg class="ic"><use href="#i-timer"/></svg></span><div><b>Quick sessions</b><p>Start a 5, 10, 15 or 30‑minute meditation in a tap.</p></div></li>
+            <li><span class="fi c-blue"><svg class="ic"><use href="#i-sprout"/></svg></span><div><b>Grow a Mind Garden</b><p>Plants, a growing tree and collectible creatures, all fed by your sessions.</p></div></li>
+            <li><span class="fi c-blue"><svg class="ic"><use href="#i-moon"/></svg></span><div><b>Keeps playing</b><p>Audio continues with a mini player while you check the rest of your day.</p></div></li>
+          </ul>
+        </div>
+        <div class="feat-panel" role="tabpanel" data-panel="4">
+          <h3>Watch your consistency build.</h3>
+          <ul class="feat-list">
+            <li><span class="fi c-yellow"><svg class="ic"><use href="#i-zap"/></svg></span><div><b>XP, levels and streaks</b><p>Supported activities earn XP toward your next level, and one qualifying activity a day keeps your streak going.</p></div></li>
+            <li><span class="fi c-yellow"><svg class="ic"><use href="#i-grid"/></svg></span><div><b>26‑week heatmap</b><p>Half a year of training, at a glance.</p></div></li>
+            <li><span class="fi c-yellow"><svg class="ic"><use href="#i-trophy"/></svg></span><div><b>Badges and achievements</b><p>Unlock milestones for workouts, distance, meditation, nutrition and streaks, then share them.</p></div></li>
+            <li><span class="fi c-yellow"><svg class="ic"><use href="#i-chart"/></svg></span><div><b>Global leaderboard</b><p>See where your all‑time XP ranks, podium included.</p></div></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="feat-phone">
+        <div class="phone">
+          <div class="screen">
+            <img class="fs active" src="assets/screens/fridge-log.webp" alt="Logging a recipe as a meal with calories and macros" width="600" height="1378" loading="lazy">
+            <img class="fs" src="assets/screens/tour-workouts.webp" alt="Evolve workout suggestions screen" width="600" height="1304" loading="lazy">
+            <img class="fs" src="assets/screens/cardio.webp" alt="Evolve cardio stats and routes screen" width="600" height="1304" loading="lazy">
+            <img class="fs" src="assets/screens/mind.webp" alt="Evolve Mind tab with quick sessions and the Mind Garden" width="600" height="1304" loading="lazy">
+            <img class="fs" src="assets/screens/profile-stats.webp" alt="Evolve profile with balance score, heatmap and badges" width="600" height="1304" loading="lazy">
+          </div>
+        </div>
+        <div class="health-chip"><svg class="ic"><use href="#i-heart"/></svg>Works with Apple Health</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FRIDGE AI ================= -->
+<section class="section" id="fridge">
+  <div class="wrap fridge-grid">
+    <div class="fridge-copy">
+      <span class="eyebrow reveal">05 · Fridge AI <em class="tag">Premium</em></span>
+      <h2 class="reveal">What's in your fridge?<br><span class="grad-text cool">Dinner, apparently.</span></h2>
+      <p class="reveal">Snap your fridge. Evolve spots the ingredients, you choose what to use, and it suggests recipes with cooking time and estimated macros. Make one, then log it in a tap.</p>
+      <ol class="steps reveal">
+        <li><b>Snap</b><span>Photo of your fridge</span></li>
+        <li><b>Pick</b><span>Choose your ingredients</span></li>
+        <li><b>Cook</b><span>Get recipe ideas</span></li>
+        <li><b>Log</b><span>Add it to your day</span></li>
+      </ol>
+
+      <div class="fridge-demo reveal">
+        <div class="fd-head">
+          <span class="mono"><b id="fdCount">17</b> of 17 selected</span>
+          <span><button class="link-btn" id="fdAll">Select all</button> · <button class="link-btn" id="fdNone">Clear</button></span>
+        </div>
+        <div class="chips" id="fdChips"></div>
+        <div class="recipes" id="fdRecipes"></div>
+        <p class="fine">Ingredients and recipes from a real Fridge AI scan. AI can miss items, recipes may need a few extras, and fridge scans have a daily limit.</p>
+      </div>
+    </div>
+
+    <div class="fridge-phone reveal">
+      <div class="phone">
+        <div class="screen">
+          <video src="assets/video/fridge-scan.mp4" poster="assets/video/fridge-poster.jpg" autoplay muted loop playsinline preload="none" aria-label="Screen recording: scanning a fridge, selecting ingredients and getting recipe ideas"></video>
+        </div>
+      </div>
+      <div class="scan-tag mono"><span class="scan-dot"></span>Scanning fridge…</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BADGES ================= -->
+<section class="section section-badges" id="badges">
+  <div class="wrap">
+    <div class="center-head">
+      <span class="eyebrow reveal">06 · Trophy shelf</span>
+      <h2 class="reveal">Small milestones.<br>Screenshot‑worthy moments.</h2>
+      <p class="reveal">From your first workout to your 365th meditation, badges mark the moments that matter. Tap one to unlock it. Here, anyway; in the app you'll have to earn it.</p>
+    </div>
+    <div class="shelf-meta reveal"><span class="mono"><b id="badgeCount">0</b> / 14 unlocked</span><span class="mono shelf-desc" id="badgeDesc">Tap a badge</span></div>
+    <div class="shelf reveal" id="shelf"></div>
+  </div>
+</section>
+
+<!-- ================= WARDROBE ================= -->
+<section class="section section-wardrobe" id="wardrobe">
+  <div class="wrap">
+    <div class="center-head">
+      <span class="eyebrow reveal">07 · The wardrobe</span>
+      <h2 class="reveal">Suit up.<br>Then climb the podium.</h2>
+      <p class="reveal">Try on suits from the Gear, Style, Premium and Ranked collections before you equip them. The podium suits are different: only the player holding that exact global rank can wear one.</p>
+    </div>
+
+    <div class="toggles reveal">
+      <div class="seg" role="group" aria-label="Character">
+        <button aria-pressed="true" data-g="male">Male</button>
+        <button aria-pressed="false" data-g="female">Female</button>
+      </div>
+      <div class="seg" role="group" aria-label="Apex GOAT style">
+        <button aria-pressed="true" data-goat="classic">Classic GOAT</button>
+        <button aria-pressed="false" data-goat="heroic">Heroic GOAT</button>
+      </div>
+    </div>
+
+    <div class="podium reveal" id="podium">
+      <figure class="pod pod-2">
+        <img src="assets/suits/grand-champion-male.webp" data-suit="grand-champion" alt="Grand Champion suit" loading="lazy" width="556" height="760">
+        <figcaption><span class="rank mono">#2</span><b>Grand Champion</b><small>Global rank #2 only</small></figcaption>
+        <div class="block"><span>2</span></div>
+      </figure>
+      <figure class="pod pod-1">
+        <div class="crown-glow"></div>
+        <img src="assets/suits/apex-goat-classic.webp" id="goatImg" alt="Apex GOAT suit" loading="lazy" width="418" height="760">
+        <figcaption><span class="rank mono">#1</span><b>Apex GOAT</b><small>Exactly one person on Earth</small></figcaption>
+        <div class="block"><span>1</span></div>
+      </figure>
+      <figure class="pod pod-3">
+        <img src="assets/suits/podium-champion-male.webp" data-suit="podium-champion" alt="Podium Champion suit" loading="lazy" width="414" height="760">
+        <figcaption><span class="rank mono">#3</span><b>Podium Champion</b><small>Global rank #3 only</small></figcaption>
+        <div class="block"><span>3</span></div>
+      </figure>
+    </div>
+
+    <div class="rack-head reveal">
+      <h3>More suits to try on</h3>
+      <div class="rack-nav">
+        <button class="round" id="rackPrev" aria-label="Scroll suits left"><svg class="ic" style="transform:rotate(180deg)"><use href="#i-arrow"/></svg></button>
+        <button class="round" id="rackNext" aria-label="Scroll suits right"><svg class="ic"><use href="#i-arrow"/></svg></button>
+      </div>
+    </div>
+    <div class="rack reveal" id="rack"></div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section" id="faq">
+  <div class="wrap faq-grid">
+    <div>
+      <span class="eyebrow reveal">08 · FAQ</span>
+      <h2 class="reveal">Questions,<br>answered.</h2>
+      <p class="reveal">Need more help? Visit <a href="/support/">Support</a>.</p>
+    </div>
+    <div class="faq reveal">
+      <details>
+        <summary>What is Evolve: Fitness Quest?<svg class="ic"><use href="#i-down"/></svg></summary>
+        <p>An iPhone app that puts workouts, cardio, nutrition and meditation in one place, then turns what you log into XP, levels, five stats and a 40‑stage Journey. The idea is simple: your real‑life effort should be something you can see.</p>
+      </details>
+      <details>
+        <summary>Do I have to finish all three daily quests to keep my streak?<svg class="ic"><use href="#i-down"/></svg></summary>
+        <p>No. One qualifying workout, meal log or meditation keeps your streak alive for the day. The other two quests are extra XP.</p>
+      </details>
+      <details>
+        <summary>What comes with Premium?<svg class="ic"><use href="#i-down"/></svg></summary>
+        <p>Premium unlocks the AI features: photo food scanning, voice food logging and Fridge AI, which has a daily scan limit. It also includes the Hero Collection suits. Current pricing is on the App Store listing.</p>
+      </details>
+      <details>
+        <summary>How accurate are the calorie estimates?<svg class="ic"><use href="#i-down"/></svg></summary>
+        <p>Photo and voice logs are AI estimates, not lab measurements. You see what was detected, adjust the portion, and choose the meal before anything gets logged.</p>
+      </details>
+      <details>
+        <summary>Does Evolve work with Apple Health?<svg class="ic"><use href="#i-down"/></svg></summary>
+        <p>Yes. With your permission, Evolve can read available steps, distance, active calories, heart rate and workouts from Apple Health, and import supported workouts, including routes when they're available.</p>
+      </details>
+      <details>
+        <summary>Are the bosses actual fights?<svg class="ic"><use href="#i-down"/></svg></summary>
+        <p>They're milestones. Each boss guards the last stage of a region on your Journey. Meet its real‑life requirements (workouts, streaks, meditation minutes, meals) and you claim the victory.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta" id="download">
+  <div class="cta-bg" aria-hidden="true"><div class="aurora a1"></div><div class="aurora a2"></div><div class="stars"></div></div>
+  <div class="wrap cta-inner">
+    <button class="dragon" id="dragon" aria-label="Say hi to the dragon">
+      <img src="assets/img/dragon.webp" alt="" width="471" height="558" loading="lazy">
+      <span class="dragon-bubble" id="dragonBubble">Hey, you!</span>
+    </button>
+    <h2 class="reveal">Hey, you.<br><span class="grad-text">Ready to evolve?</span></h2>
+    <p class="reveal">Your first quest is waiting. A little movement, a little more momentum.</p>
+    <a class="store-btn store-btn-lg reveal" href="https://apps.apple.com/us/app/evolve-calorie-tracker/id6743642232" data-store>
+      <svg class="ic ic-fill"><use href="#i-apple"/></svg>
+      <span><small>Download on the</small>App Store</span>
+    </a>
+    <div class="irl reveal">
+      <span>Watch the bosses on <b>Evolve IRL</b></span>
+      <div class="socials">
+        <a href="https://www.tiktok.com/@evolveirlshow" aria-label="Evolve IRL on TikTok" rel="noopener" target="_blank"><svg class="ic"><use href="#i-tiktok"/></svg></a>
+        <a href="https://www.instagram.com/evolveirlshow/" aria-label="Evolve IRL on Instagram" rel="noopener" target="_blank"><svg class="ic"><use href="#i-instagram"/></svg></a>
+        <a href="https://www.youtube.com/@EvolveIRLShow" aria-label="Evolve IRL on YouTube" rel="noopener" target="_blank"><svg class="ic"><use href="#i-youtube"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <a class="brand" href="/"><img src="assets/img/icon-256.png" alt="" width="28" height="28" loading="lazy"><span>Evolve</span></a>
+    <nav aria-label="Footer">
+      <a href="/support/">Support</a>
+      <a href="/creators/">Creator Program</a>
+      <a href="/terms.html">Terms &amp; Conditions</a>
+      <a href="/privacy.html">Privacy Policy</a>
+    </nav>
+    <p class="legal">© <span id="year">2026</span> Evolve. Apple, the Apple logo and iPhone are trademarks of Apple Inc. Evolve provides estimates for general wellness and is not medical advice.</p>
+  </div>
+</footer>
+
+<canvas id="confetti" aria-hidden="true"></canvas>
+<script src="home.js" defer></script>
+</body>
 </html>
