@@ -16,14 +16,16 @@
     let parts = [];
     let raf = null;
     const colors = ["#c9bcff", "#a78bfa", "#e879f9", "#f472b6", "#fbbf24", "#4ade80", "#60a5fa"];
+    // The full-screen canvas is only sized and shown while confetti is flying,
+    // so it costs nothing to composite during normal scrolling.
+    cvs.hidden = true;
     const resize = () => {
       const dpr = Math.min(window.devicePixelRatio || 1, 2);
       cvs.width = innerWidth * dpr;
       cvs.height = innerHeight * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     };
-    resize();
-    addEventListener("resize", resize);
+    addEventListener("resize", () => { if (!cvs.hidden) resize(); });
     const tick = () => {
       ctx.clearRect(0, 0, innerWidth, innerHeight);
       parts = parts.filter((p) => p.life > 0);
@@ -47,6 +49,7 @@
         ctx.restore();
       }
       raf = parts.length ? requestAnimationFrame(tick) : null;
+      if (!raf) cvs.hidden = true;
     };
     return (x, y, n = 90) => {
       if (reduceMotion) return;
@@ -65,7 +68,11 @@
           life: 70 + Math.random() * 50,
         });
       }
-      if (!raf) raf = requestAnimationFrame(tick);
+      if (!raf) {
+        cvs.hidden = false;
+        resize();
+        raf = requestAnimationFrame(tick);
+      }
     };
   })();
   const burstFrom = (el, n) => {
@@ -96,10 +103,17 @@
   const MAX_LVL = 10;
   let lastLvl = 1;
   let toastTimer;
+  // Cache the scrollable height instead of reading it (and forcing layout) on every scroll event.
+  let maxScroll = 0;
+  const measure = () => { maxScroll = document.documentElement.scrollHeight - innerHeight; };
+  measure();
+  addEventListener("resize", measure);
+  addEventListener("load", measure);
+  if ("ResizeObserver" in window) new ResizeObserver(measure).observe(document.body);
   const onScroll = () => {
     const y = scrollY;
     nav.classList.toggle("scrolled", y > 20);
-    const max = document.documentElement.scrollHeight - innerHeight;
+    const max = maxScroll;
     const p = max > 0 ? Math.min(1, y / max) : 0;
     const lvl = Math.min(MAX_LVL, 1 + Math.floor(p * MAX_LVL));
     const within = (p * MAX_LVL) % 1;
@@ -634,13 +648,19 @@
     $("#fdNone").addEventListener("click", () => { selected.clear(); render(); });
     render();
 
-    // play the screen recording only when on screen
+    // Don't fetch the screen recording until it's close to the viewport, then play it only while visible.
     const vid = $("#fridge video");
     if (vid) {
-      new IntersectionObserver((es) => es.forEach((e) => {
-        if (e.isIntersecting) vid.play().catch(() => {});
-        else vid.pause();
-      }), { threshold: 0.25 }).observe(vid);
+      new IntersectionObserver((es, obs) => es.forEach((e) => {
+        if (!e.isIntersecting) return;
+        vid.poster = vid.dataset.poster;
+        vid.src = vid.dataset.src;
+        obs.disconnect();
+        new IntersectionObserver((es2) => es2.forEach((e2) => {
+          if (e2.isIntersecting) vid.play().catch(() => {});
+          else vid.pause();
+        }), { threshold: 0.25 }).observe(vid);
+      }), { rootMargin: "600px 0px" }).observe(vid);
     }
   })();
 
