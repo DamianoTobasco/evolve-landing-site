@@ -617,7 +617,15 @@ p { margin: 0; }
 .rack-nav { display: flex; gap: 8px; }
 .round { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line-2); background: rgba(255, 255, 255, .04); display: grid; place-items: center; transition: all .25s; }
 .round:hover { background: rgba(255, 255, 255, .1); transform: scale(1.06); }
-.rack { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 4px 20px; scrollbar-width: thin; scrollbar-color: rgba(167, 139, 250, .4) transparent; }
+/* A scroller clips its overflow, so pad it (and pull it back with negative margins)
+   to leave room for the hover lift and glow without shifting the layout. */
+.rack {
+  --bleed: 32px;
+  display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory;
+  padding: 20px var(--bleed) 64px; margin: -20px calc(var(--bleed) * -1) -44px;
+  scroll-padding-inline: var(--bleed);
+  scrollbar-width: thin; scrollbar-color: rgba(167, 139, 250, .4) transparent;
+}
 .suit {
   --c: #a78bfa;
   flex: 0 0 210px; scroll-snap-align: start; position: relative; height: 330px; border-radius: 24px; overflow: hidden;
@@ -694,6 +702,7 @@ p { margin: 0; }
   .arena-info { border-left: 0; border-top: 1px solid var(--line); }
   .arena-stage { min-height: 400px; }
   .shelf { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .rack { --bleed: 20px; }
   .shelf::after { display: none; }
 }
 
@@ -751,6 +760,7 @@ p { margin: 0; }
   .block { padding-top: 10px; }
   .pod-1 .block { height: 100px; } .pod-2 .block { height: 76px; } .pod-3 .block { height: 62px; }
   .crown-glow { width: 220px; height: 220px; }
+  .rack { --bleed: 16px; }
   .suit { flex-basis: 170px; height: 280px; }
   .suit img { height: 205px; }
   .dragon { width: 150px; }
