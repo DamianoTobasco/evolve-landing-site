@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["P2DW8DNS6U.com.evolve.health"],
+        "components": [
+          { "/": "/b/*", "comment": "Evolve Arena invite links: theevolve.app/b/<friend code>" }
+        ]
+      }
+    ]
+  }
+}
