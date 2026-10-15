@@ -1,4 +1,4 @@
-/* Evolve: Fitness Quest — site interactions */
+/* Evolve Arena — site interactions */
 (() => {
   "use strict";
 
