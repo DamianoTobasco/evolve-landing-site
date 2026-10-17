@@ -3,70 +3,74 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Evolve Arena — Level up your real life</title>
-  <meta name="description" content="Evolve turns workouts, cardio, meals and meditation into XP, levels and a 40-stage Journey. Track it all in one iPhone app and watch your real-life effort level you up.">
-  <meta name="theme-color" content="#07050f">
+  <title>Evolve Arena — Train in real life. Battle in the Arena.</title>
+  <meta name="description" content="Evolve Arena is a free real-time 3D brawler for iPhone where your real training powers your hero. 10 free heroes, 6 game modes, online battles with friends, daily chests and skins.">
+  <meta name="theme-color" content="#0a1238">
   <script>document.documentElement.className = "js";</script>
   <link rel="canonical" href="https://theevolve.app/">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://theevolve.app/">
-  <meta property="og:title" content="Evolve Arena — Small wins. Big evolution.">
-  <meta property="og:description" content="Workouts, cardio, nutrition and meditation in one app — and every bit of it earns XP toward your next level.">
-  <meta property="og:image" content="https://theevolve.app/assets/img/og.jpg">
+  <meta property="og:site_name" content="Evolve Arena">
+  <meta property="og:title" content="Evolve Arena — Train in real life. Battle in the Arena.">
+  <meta property="og:description" content="Real-time 3D battles where your workouts, meals and habits power your hero. 10 heroes, all free.">
+  <meta property="og:image" content="https://theevolve.app/assets/arena/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://theevolve.app/assets/arena/og.jpg">
   <meta name="apple-itunes-app" content="app-id=6743642232">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png">
-  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/arena/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/arena/favicon-64.png">
+  <link rel="apple-touch-icon" href="assets/arena/apple-touch-icon.png">
 
+  <link rel="preload" as="image" href="assets/arena/keyart-wide.webp" media="(min-width: 761px)">
+  <link rel="preload" as="image" href="assets/arena/keyart-tall.webp" media="(max-width: 760px)">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Fonts load without blocking the first paint; text shows in the system font until they arrive. -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap"></noscript>
-  <link rel="stylesheet" href="home.css">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@600;700;800;900&display=swap"></noscript>
+  <link rel="stylesheet" href="arena.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Evolve Arena",
+    "operatingSystem": "iOS",
+    "applicationCategory": "GameApplication",
+    "url": "https://theevolve.app/",
+    "image": "https://theevolve.app/assets/arena/og.jpg",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "downloadUrl": "https://apps.apple.com/app/id6743642232"
+  }
+  </script>
 </head>
 <body>
 
-<!-- Icon sprite -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
-    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
-    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></symbol>
-    <symbol id="i-dumbbell" viewBox="0 0 24 24"><path d="m6.5 6.5 11 11"/><path d="m21 21-1-1"/><path d="m3 3 1 1"/><path d="m18 22 4-4"/><path d="m2 6 4-4"/><path d="m3 10 7-7"/><path d="m14 21 7-7"/></symbol>
-    <symbol id="i-utensils" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></symbol>
-    <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></symbol>
-    <symbol id="i-activity" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol>
-    <symbol id="i-camera" viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></symbol>
-    <symbol id="i-mic" viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v3"/></symbol>
-    <symbol id="i-barcode" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M8 7v10"/><path d="M12 7v10"/><path d="M16 7v10"/></symbol>
-    <symbol id="i-map" viewBox="0 0 24 24"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"/><path d="M15 5.764v15"/><path d="M9 3.236v15"/></symbol>
-    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
-    <symbol id="i-droplet" viewBox="0 0 24 24"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></symbol>
-    <symbol id="i-timer" viewBox="0 0 24 24"><path d="M10 2h4"/><path d="m12 14 3-3"/><circle cx="12" cy="14" r="8"/></symbol>
-    <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></symbol>
-    <symbol id="i-swords" viewBox="0 0 24 24"><path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="m13 19 6-6"/><path d="m16 16 4 4"/><path d="m19 21 2-2"/><path d="M14.5 6.5 18 3h3v3l-3.5 3.5"/><path d="m5 14 4 4"/><path d="m7 17-3 3"/><path d="m3 19 2 2"/></symbol>
-    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
-    <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
-    <symbol id="i-rotate" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></symbol>
-    <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
-    <symbol id="i-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></symbol>
-    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></symbol>
-    <symbol id="i-grid" viewBox="0 0 24 24"><rect width="7" height="7" x="3" y="3" rx="1.5"/><rect width="7" height="7" x="14" y="3" rx="1.5"/><rect width="7" height="7" x="14" y="14" rx="1.5"/><rect width="7" height="7" x="3" y="14" rx="1.5"/></symbol>
-    <symbol id="i-share" viewBox="0 0 24 24"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="m16 6-4-4-4 4"/><path d="M12 2v13"/></symbol>
-    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
-    <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></symbol>
-    <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></symbol>
-    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></symbol>
-    <symbol id="i-headphones" viewBox="0 0 24 24"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></symbol>
-    <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></symbol>
-    <symbol id="i-phone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
-    <symbol id="i-instagram" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></symbol>
-    <symbol id="i-youtube" viewBox="0 0 24 24"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></symbol>
-    <symbol id="i-tiktok" viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0 4 4V2c.5 2.5 2.6 4.6 5.5 5"/></symbol>
-    <symbol id="i-apple" viewBox="0 0 24 24"><path stroke="none" fill="currentColor" d="M16.37 1.43c0 1.14-.42 2.2-1.12 2.98-.84.94-2.2 1.66-3.3 1.57-.14-1.1.41-2.26 1.1-3 .78-.86 2.12-1.5 3.32-1.55ZM20.5 17.1c-.56 1.3-.83 1.88-1.55 3.03-1 1.6-2.42 3.6-4.18 3.62-1.56.01-1.96-1.02-4.08-1-2.12.01-2.56 1.02-4.12 1-1.76-.02-3.1-1.82-4.11-3.42-2.82-4.48-3.12-9.74-1.38-12.53 1.24-1.98 3.2-3.14 5.03-3.14 1.87 0 3.05 1.03 4.6 1.03 1.5 0 2.42-1.03 4.58-1.03 1.64 0 3.37.89 4.6 2.43-4.04 2.22-3.39 8 .61 10.01Z"/></symbol>
+    <symbol id="i-apple" viewBox="0 0 24 24"><path fill="currentColor" d="M16.37 1.43c0 1.14-.42 2.2-1.12 2.98-.84.94-2.2 1.66-3.3 1.57-.14-1.1.41-2.26 1.1-3 .78-.86 2.12-1.5 3.32-1.55ZM20.5 17.1c-.56 1.3-.83 1.88-1.55 3.03-1 1.6-2.42 3.6-4.18 3.62-1.56.01-1.96-1.02-4.08-1-2.12.01-2.56 1.02-4.12 1-1.76-.02-3.1-1.82-4.11-3.42-2.82-4.48-3.12-9.74-1.38-12.53 1.24-1.98 3.2-3.14 5.03-3.14 1.87 0 3.05 1.03 4.6 1.03 1.5 0 2.42-1.03 4.58-1.03 1.64 0 3.37.89 4.6 2.43-4.04 2.22-3.39 8 .61 10.01Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 5l7 7-7 7"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="m15 5-7 7 7 7"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="m9 5 7 7-7 7"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="currentColor" d="M13.2 2.2 4.6 13.1c-.4.5 0 1.2.6 1.2h5.3l-1.4 7.2c-.1.7.8 1.1 1.2.5l8.6-10.9c.4-.5 0-1.2-.6-1.2H13l1.4-7.2c.1-.7-.8-1.1-1.2-.5Z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.6 2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 16.8l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7Z"/></symbol>
+    <symbol id="i-dumbbell" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M6.5 6.5l11 11M21 21l-1-1M3 3l1 1M18 22l4-4M2 6l4-4M3 10l7-7M14 21l7-7"/></symbol>
+    <symbol id="i-run" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="4.5" r="2" fill="currentColor"/><path d="M8 21l3-6 3 2v5M6 12l3-4 4 1 3 4 3 1M11 15l2-5"/></g></symbol>
+    <symbol id="i-mind" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2.2" fill="currentColor"/><path d="M4 18c2.5-.5 4.5-1.5 5.5-4l2.5-3 2.5 3c1 2.5 3 3.5 5.5 4M7 21h10"/></g></symbol>
+    <symbol id="i-apple-fruit" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7c-2-1.5-7-1.5-7 4.5 0 4.5 3 9.5 5 9.5 1 0 1.3-.5 2-.5s1 .5 2 .5c2 0 5-5 5-9.5C19 5.5 14 5.5 12 7Z"/><path d="M12 7c0-2 1-3.5 3-4"/></g></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path fill="currentColor" d="M12.6 2.2c.3 2.6 1.8 4.3 3.4 6 1.8 1.9 3.4 3.8 3.4 6.8A7.3 7.3 0 0 1 12 22a7.2 7.2 0 0 1-7.3-7.1c0-2.4 1.1-4.1 2.4-5.4.4-.4 1.1-.1 1.1.5 0 1.3.6 2.4 1.7 2.9-.4-3.9 1.2-7.4 4-9.4.3-.2.7 0 .7.4Z"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5M16 4.8a3.5 3.5 0 0 1 0 6.4M18.5 14.8c1.7.8 2.8 2.5 3 5.2"/></g></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" d="M12 2.8 4.5 5.6v5.9c0 4.7 3.1 8.2 7.5 9.7 4.4-1.5 7.5-5 7.5-9.7V5.6Z"/><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m8.8 12 2.2 2.2 4.3-4.4"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2"><rect width="18" height="18" x="3" y="3" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></g></symbol>
+    <symbol id="i-youtube" viewBox="0 0 24 24"><path fill="currentColor" d="M21.6 7.2a2.6 2.6 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.6 2.6 0 0 0 2.4 7.2 27 27 0 0 0 2 12a27 27 0 0 0 .4 4.8 2.6 2.6 0 0 0 1.8 1.8c1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4a2.6 2.6 0 0 0 1.8-1.8A27 27 0 0 0 22 12a27 27 0 0 0-.4-4.8ZM10 15.1V8.9l5.2 3.1Z"/></symbol>
+    <symbol id="i-tiktok" viewBox="0 0 24 24"><path fill="currentColor" d="M16.6 2h-3.4v13.4a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9.2a6.3 6.3 0 1 0 5.4 6.2V8.6a7.6 7.6 0 0 0 4.4 1.4V6.6a4.4 4.4 0 0 1-4.4-4.6Z"/></symbol>
   </defs>
 </svg>
 
@@ -75,499 +79,444 @@
 <!-- ================= NAV ================= -->
 <header class="nav" id="nav">
   <div class="nav-inner">
-    <a class="brand" href="/" aria-label="Evolve home">
-      <img src="assets/img/icon-256.png" alt="" width="34" height="34">
-      <span>Evolve</span>
+    <a class="brand" href="/" aria-label="Evolve Arena home">
+      <img src="assets/arena/icon-256.webp" alt="" width="40" height="40">
+      <span class="brand-word"><b>Evolve</b><i>Arena</i></span>
     </a>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="#quests">Quests</a>
-      <a href="#journey">Journey</a>
-      <a href="#features">Features</a>
-      <a href="#fridge">Fridge AI</a>
-      <a href="#wardrobe">Wardrobe</a>
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#game">The Game</a>
+      <a href="#heroes">Heroes</a>
+      <a href="#modes">Modes</a>
+      <a href="#training">Training</a>
+      <a href="#worlds">Worlds</a>
+      <a href="#news">News</a>
+      <a href="/support/">Support</a>
     </nav>
-    <div class="nav-xp" aria-hidden="true" title="You earn XP for scrolling. Obviously.">
-      <span class="nav-lvl">LVL <b id="navLvl">1</b></span>
-      <span class="nav-bar"><i id="navBar"></i></span>
-    </div>
-    <a class="btn btn-sm btn-light" href="https://apps.apple.com/us/app/evolve-calorie-tracker/id6743642232" data-store>
-      <svg class="ic ic-fill"><use href="#i-apple"/></svg> Download
+    <a class="btn btn-gold btn-sm nav-cta" href="https://apps.apple.com/app/id6743642232" data-store>
+      <svg class="ic"><use href="#i-apple"/></svg><span>Play free</span>
     </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <svg class="ic ic-open"><use href="#i-menu"/></svg><svg class="ic ic-close"><use href="#i-close"/></svg>
+    </button>
   </div>
-  <div class="lvl-toast" id="lvlToast" role="status" aria-live="polite"></div>
 </header>
 
 <main id="main">
 
-<!-- ================= HERO ================= -->
-<section class="hero" id="top">
-  <div class="hero-bg" aria-hidden="true">
-    <div class="aurora a1"></div><div class="aurora a2"></div><div class="aurora a3"></div>
-    <div class="stars"></div>
-    <div class="grid-floor"></div>
+<!-- ================= KEY ART ================= -->
+<section class="keyart" id="top" aria-label="Evolve Arena">
+  <h1 class="sr-only">Evolve Arena</h1>
+  <picture>
+    <source media="(max-width: 760px)" srcset="assets/arena/keyart-tall.webp">
+    <source media="(max-width: 1300px)" srcset="assets/arena/keyart-wide-1200.webp">
+    <img class="keyart-img" src="assets/arena/keyart-wide.webp" width="1915" height="821" alt="Evolve Arena key art: Talon, Ion, Atlas and Cortex burst out of the Aurelia Colosseum behind the Evolve Arena logo." fetchpriority="high">
+  </picture>
+  <div class="keyart-fade" aria-hidden="true"></div>
+  <div class="keyart-ribbon">
+    <span class="ribbon-tag">Free on iPhone</span>
+    <a class="btn btn-gold btn-lg" href="https://apps.apple.com/app/id6743642232" data-store>
+      <svg class="ic"><use href="#i-apple"/></svg>
+      <span><small>Download on the</small>App Store</span>
+    </a>
+    <a class="btn btn-blue btn-lg" href="#heroes">Meet the heroes</a>
   </div>
+</section>
 
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <span class="pill rise"><span class="pill-dot"></span>Evolve Arena · for iPhone</span>
-      <h1 class="rise">Small wins.<br><span class="grad-text">Big evolution.</span></h1>
-      <p class="lead rise">Evolve turns your workouts, walks, meals and mindful minutes into XP, levels and a 40‑stage Journey. Real effort, visible progress, and a few bosses to beat along the way.</p>
-      <div class="hero-cta rise">
-        <a class="store-btn" href="https://apps.apple.com/us/app/evolve-calorie-tracker/id6743642232" data-store>
-          <svg class="ic ic-fill"><use href="#i-apple"/></svg>
-          <span><small>Download on the</small>App Store</span>
+<!-- ================= INTRO (Supercell-style image + text block) ================= -->
+<section class="intro sky" id="game">
+  <div class="clouds" aria-hidden="true">
+    <img class="cloud c1" src="assets/arena/fx/cloud_a.webp" alt="" loading="lazy">
+    <img class="cloud c2" src="assets/arena/fx/cloud_puff.webp" alt="" loading="lazy">
+  </div>
+  <div class="wrap intro-grid">
+    <div class="phone reveal" data-cycle>
+      <div class="phone-screen">
+        <img class="is-on" src="assets/arena/shots/takedown.webp" alt="A 3v3 Takedown in the Aurelia Colosseum with two Supers firing at once." width="620" height="1347" loading="lazy">
+        <img src="assets/arena/shots/skyfire.webp" alt="Talon's Skyfire Super raining fire on a 3v3 battle in Cosmos." width="620" height="1347" loading="lazy">
+        <img src="assets/arena/shots/flags.webp" alt="Capture the Flag in Sakura Sanctuary: you have the flag, run home." width="620" height="1347" loading="lazy">
+        <img src="assets/arena/shots/quake.webp" alt="Quake's Titan Leap stunning rivals on the Aurora Peaks map." width="620" height="1347" loading="lazy">
+      </div>
+      <div class="phone-dots" aria-hidden="true"><i class="is-on"></i><i></i><i></i><i></i></div>
+    </div>
+    <div class="intro-copy">
+      <span class="kicker reveal">Real-time 3D brawls</span>
+      <h2 class="title reveal">Train in real life.<br><span class="gold">Battle in the Arena.</span></h2>
+      <p class="reveal">Evolve Arena is two games in one. In real life, every workout, meal and healthy habit you log earns XP and levels up your hero. In the Arena, that hero fights in fast, real-time 3D battles against rivals and friends: move, aim and fire with twin-stick controls and instant response.</p>
+      <p class="reveal"><b>Train harder, hit harder.</b></p>
+      <ul class="facts reveal">
+        <li><b>10</b><span>heroes,<br>all free</span></li>
+        <li><b>6</b><span>game<br>modes</span></li>
+        <li><b>6</b><span>worlds to<br>battle in</span></li>
+        <li><b>15</b><span>free chests<br>a day, max</span></li>
+      </ul>
+      <div class="store-row reveal">
+        <a class="appstore" href="https://apps.apple.com/app/id6743642232" data-store aria-label="Download Evolve Arena on the App Store">
+          <svg class="ic"><use href="#i-apple"/></svg><span><small>Download on the</small>App Store</span>
         </a>
-        <a class="btn btn-ghost" href="#quests">Try a quest <svg class="ic"><use href="#i-down"/></svg></a>
+        <span class="store-note">Free to play · iPhone</span>
       </div>
-      <ul class="hero-facts rise" aria-label="Evolve at a glance">
-        <li><b>5</b><span>stats to level</span></li>
-        <li><b>40</b><span>Journey stages</span></li>
-        <li><b>5</b><span>bosses to beat</span></li>
-        <li><b>24</b><span>activity types</span></li>
-      </ul>
-    </div>
-
-    <div class="hero-visual" id="heroVisual" aria-hidden="true">
-      <div class="halo"></div>
-      <div class="orbit o1"><i></i></div>
-      <div class="orbit o2"><i></i></div>
-      <img class="hero-mascot" src="assets/img/mascot.webp" srcset="assets/img/mascot-380.webp 380w, assets/img/mascot.webp 473w" sizes="(max-width: 760px) 180px, 241px" alt="" width="473" height="1100" decoding="async" data-depth="0.5">
-      <div class="phone hero-phone" data-depth="0.25">
-        <div class="screen"><img src="assets/screens/home.webp" alt="" width="600" height="1304" decoding="async"></div>
-      </div>
-      <div class="hud hud-xp" data-depth="1.1">
-        <span class="hud-ico c-green"><svg class="ic"><use href="#i-dumbbell"/></svg></span>
-        <span><small>Workout complete</small><b class="mono">+50 XP</b></span>
-      </div>
-      <div class="hud hud-streak" data-depth="0.9">
-        <img src="assets/img/flame.webp" alt="" width="21" height="24">
-        <span><small>Daily streak</small><b>Safe for today</b></span>
-      </div>
-      <div class="hud hud-stage" data-depth="1.4">
-        <span class="hud-num mono">18</span>
-        <span><small>Journey · Stage 18</small><b>Endurance Trial</b></span>
-      </div>
-      <div class="hud hud-stats" data-depth="0.7">
-        <span class="mini-stat"><i style="--c:var(--s-str);--v:.72"></i>STR</span>
-        <span class="mini-stat"><i style="--c:var(--s-car);--v:.9"></i>CAR</span>
-        <span class="mini-stat"><i style="--c:var(--s-mind);--v:.38"></i>MND</span>
-        <span class="mini-stat"><i style="--c:var(--s-nut);--v:.55"></i>NUT</span>
-        <span class="mini-stat"><i style="--c:var(--s-con);--v:.46"></i>CON</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span>Running</span><span>Walking</span><span>Hiking</span><span>Strength Training</span><span>Cycling</span><span>Yoga</span><span>HIIT</span><span>Rowing</span><span>Boxing Cardio</span><span>Swimming</span><span>Pilates</span><span>Trail Running</span><span>Paddleboarding</span><span>Jump Rope</span><span>Kayaking</span><span>Stair Climbing</span><span>Mountain Biking</span><span>Skating</span>
-      <span>Running</span><span>Walking</span><span>Hiking</span><span>Strength Training</span><span>Cycling</span><span>Yoga</span><span>HIIT</span><span>Rowing</span><span>Boxing Cardio</span><span>Swimming</span><span>Pilates</span><span>Trail Running</span><span>Paddleboarding</span><span>Jump Rope</span><span>Kayaking</span><span>Stair Climbing</span><span>Mountain Biking</span><span>Skating</span>
     </div>
   </div>
 </section>
 
-<!-- ================= DAILY QUESTS ================= -->
-<section class="section" id="quests">
-  <div class="wrap split">
-    <div class="split-copy">
-      <span class="eyebrow reveal">01 · Daily quests</span>
-      <h2 class="reveal">Three small wins.<br>One very satisfying bar.</h2>
-      <p class="reveal">Every day, Evolve sets three quests: train, eat, breathe. Finish one and your streak is safe. Finish all three and watch the XP bar move. Go on, tap them.</p>
-      <ul class="ticks reveal">
-        <li><svg class="ic"><use href="#i-flame"/></svg><span><b>One quest keeps your streak alive.</b> A workout, a meal log or a meditation is enough.</span></li>
-        <li><svg class="ic"><use href="#i-bell"/></svg><span><b>Reminders when you want them.</b> Pick the times for workout, meal and water nudges.</span></li>
-        <li><svg class="ic"><use href="#i-grid"/></svg><span><b>Home Screen widgets</b> for progress, nutrition, cardio, food scan and water.</span></li>
-      </ul>
-    </div>
-
-    <div class="quest-card reveal" id="questCard">
-      <div class="qc-head">
-        <div>
-          <span class="mono qc-label">Daily quests</span>
-          <div class="qc-day">Day <b id="qDay">1</b></div>
-        </div>
-        <div class="qc-streak" id="qStreak" data-safe="false">
-          <img src="assets/img/flame.webp" alt="" width="18" height="21" loading="lazy">
-          <span id="qStreakText">Streak at risk</span>
-        </div>
-      </div>
-
-      <div class="quest-list">
-        <button class="quest" data-xp="50" data-stat="str">
-          <span class="q-check"><svg class="ic"><use href="#i-check"/></svg></span>
-          <span class="q-icon c-red"><svg class="ic"><use href="#i-dumbbell"/></svg></span>
-          <span class="q-text"><b>Complete a workout</b><small>Lift, run, ride, flow — it all counts</small></span>
-          <span class="q-xp mono">+50 XP</span>
-        </button>
-        <button class="quest" data-xp="25" data-stat="nut">
-          <span class="q-check"><svg class="ic"><use href="#i-check"/></svg></span>
-          <span class="q-icon c-orange"><svg class="ic"><use href="#i-utensils"/></svg></span>
-          <span class="q-text"><b>Log a meal</b><small>Photo, voice, barcode, search or manual</small></span>
-          <span class="q-xp mono">+25 XP</span>
-        </button>
-        <button class="quest" data-xp="30" data-stat="mind">
-          <span class="q-check"><svg class="ic"><use href="#i-check"/></svg></span>
-          <span class="q-icon c-blue"><svg class="ic"><use href="#i-sparkles"/></svg></span>
-          <span class="q-text"><b>Meditate</b><small>Even five minutes counts</small></span>
-          <span class="q-xp mono">+30 XP</span>
-        </button>
-      </div>
-
-      <div class="qc-xp">
-        <div class="qc-xp-top">
-          <span class="mono">LVL <b id="qLvl">1</b></span>
-          <span class="mono qc-xp-num"><b id="qXp">0</b> / 100 XP</span>
-        </div>
-        <div class="xpbar"><i id="qBar"></i><span class="xpbar-shine"></span></div>
-      </div>
-
-      <div class="qc-foot">
-        <span id="qMsg">Tap a quest to complete it.</span>
-        <button class="link-btn" id="qNext" hidden>Next day <svg class="ic"><use href="#i-arrow"/></svg></button>
-      </div>
-      <div class="levelup" id="levelUp" aria-hidden="true"><span>LEVEL UP!</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= JOURNEY + BOSSES ================= -->
-<section class="section section-journey" id="journey">
+<!-- ================= NEWS ================= -->
+<section class="news stone" id="news">
   <div class="wrap">
-    <div class="center-head">
-      <span class="eyebrow reveal">02 · The Journey</span>
-      <h2 class="reveal">40 stages. 5 regions.<br><span class="grad-text warm">5 bosses who'd rather you didn't.</span></h2>
-      <p class="reveal">Climb from Awakening to Mythic. Every region ends in a boss stage, and the only way past is real life: workouts, streaks, meals and minutes of calm.</p>
+    <div class="section-head center">
+      <h2 class="title reveal">Arena <span class="gold">News</span></h2>
+      <p class="reveal">What's new in Evolve Arena.</p>
     </div>
-
-    <div class="journey-track reveal" id="journeyTrack" role="tablist" aria-label="Journey regions"></div>
-
-    <div class="arena reveal" id="arena">
-      <div class="arena-stage">
-        <div class="arena-glow"></div>
-        <div class="arena-floor"></div>
-        <div class="boss-wrap" id="bossWrap">
-          <img class="boss-img" id="bossImg" src="assets/bosses/couch-potato-king.webp" alt="The Couch Potato King" width="619" height="640" loading="lazy" decoding="async">
+    <div class="news-grid">
+      <a class="news-card reveal" href="#game">
+        <div class="news-art art-launch">
+          <img src="assets/arena/keyart-wide-1200.webp" alt="" loading="lazy">
         </div>
-        <div class="dmg-layer" id="dmgLayer" aria-hidden="true"></div>
-        <div class="defeated-stamp" id="defeatStamp" aria-hidden="true">DEFEATED</div>
-      </div>
-
-      <div class="arena-info">
-        <div class="arena-top">
-          <span class="mono arena-region" id="bossRegion">Awakening · Stage 8</span>
-          <span class="mono arena-reward" id="bossReward">+500 XP</span>
+        <span class="tag tag-gold">Launch</span>
+        <h3>Evolve is now Evolve Arena</h3>
+        <p>Your training now powers a hero in a brand-new real-time 3D battle game, built right into the app.</p>
+      </a>
+      <a class="news-card reveal" href="#modes">
+        <div class="news-art art-mode" style="--c1:#ff5ca3;--c2:#7b1fa2">
+          <img class="pose p1" src="assets/arena/heroes/ventus.webp" alt="" loading="lazy">
+          <img class="pose p2" src="assets/arena/heroes/shade.webp" alt="" loading="lazy">
+          <span class="art-label">2v2v2v2</span>
         </div>
-        <h3 id="bossName">Couch Potato King</h3>
-        <p class="boss-taunt" id="bossTaunt">“Just one more episode.”</p>
-
-        <div class="hp">
-          <div class="hp-top"><span class="mono">HP</span><span class="mono" id="hpNum">100 / 100</span></div>
-          <div class="hp-bar"><i id="hpBar"></i><b id="hpGhost"></b></div>
+        <span class="tag tag-pink">New mode</span>
+        <h3>Duo Showdown</h3>
+        <p>Four duos, one storm. Knock rivals out to steal their DNA and evolve. Last duo standing wins.</p>
+      </a>
+      <a class="news-card reveal" href="#modes">
+        <div class="news-art art-mode" style="--c1:#9e66ff;--c2:#2b1170">
+          <img class="pose p1" src="assets/arena/heroes/kryll.webp" alt="" loading="lazy">
+          <img class="pose p2" src="assets/arena/heroes/volt.webp" alt="" loading="lazy">
+          <span class="art-label">6 heroes · FFA</span>
         </div>
-
-        <div class="req">
-          <span class="mono req-label">To clear this stage in the app</span>
-          <ul id="bossReqs"></ul>
+        <span class="tag tag-purple">New mode</span>
+        <h3>DNA Drops</h3>
+        <p>Six heroes, all for themselves. Grab spilled DNA to evolve, then survive 10 seconds at Apex.</p>
+      </a>
+      <a class="news-card reveal" href="#rewards">
+        <div class="news-art art-gift">
+          <img class="chest-pop" src="assets/arena/chests/legendary.webp" alt="" loading="lazy">
         </div>
-
-        <div class="arena-actions">
-          <button class="btn btn-attack" id="attackBtn"><svg class="ic"><use href="#i-swords"/></svg><span id="attackLabel">Attack: log a workout</span></button>
-          <button class="btn btn-ghost btn-sm" id="rematchBtn" hidden><svg class="ic"><use href="#i-rotate"/></svg> Rematch</button>
-        </div>
-        <p class="fine">In the app, boss stages are milestones: hit the requirements in real life, then claim the victory. The button mashing is just for this page.</p>
-      </div>
+        <span class="tag tag-blue">Rewards</span>
+        <h3>Invite a friend, both get a chest</h3>
+        <p>Share your invite link. When a friend joins, you both get a free gift chest.</p>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ================= STATS ================= -->
-<section class="section" id="stats">
-  <div class="wrap split split-rev">
-    <div class="split-copy">
-      <span class="eyebrow reveal">03 · Your stats</span>
-      <h2 class="reveal">Five stats.<br><em>One</em> well‑rounded you.</h2>
-      <p class="reveal">Strength, Cardio, Mind, Nutrition and Consistency grow from what you actually do. Your profile turns them into a Balance Score and nudges you toward your lowest stat. Try a few moves and watch the shape change.</p>
-      <div class="stat-actions reveal" id="statActions">
-        <button data-s="0"><svg class="ic"><use href="#i-dumbbell"/></svg>Lift</button>
-        <button data-s="1"><svg class="ic"><use href="#i-activity"/></svg>Run</button>
-        <button data-s="2"><svg class="ic"><use href="#i-sparkles"/></svg>Meditate</button>
-        <button data-s="3"><svg class="ic"><use href="#i-utensils"/></svg>Log a meal</button>
-        <button data-s="4"><svg class="ic"><use href="#i-calendar"/></svg>Show up again</button>
-      </div>
-    </div>
-
-    <div class="stats-card reveal">
-      <div class="radar-wrap">
-        <svg class="radar" id="radar" viewBox="0 0 320 320" role="img" aria-label="Five-stat radar chart"></svg>
-        <div class="balance">
-          <span class="mono">Balance score</span>
-          <b id="balNum">40</b>
-          <small id="balHint">Focus on Mind</small>
-        </div>
-      </div>
-      <ul class="stat-rows" id="statRows"></ul>
-    </div>
-  </div>
-</section>
-
-<!-- ================= FEATURES ================= -->
-<section class="section section-features" id="features">
+<!-- ================= HEROES ================= -->
+<section class="heroes" id="heroes" aria-labelledby="heroesTitle">
+  <div class="heroes-glow" aria-hidden="true"></div>
   <div class="wrap">
-    <div class="center-head">
-      <span class="eyebrow reveal">04 · The toolkit</span>
-      <h2 class="reveal">One app. The whole quest log.</h2>
-      <p class="reveal">Nutrition, training, cardio and meditation, all feeding the same XP bar. No more juggling five apps to see one day.</p>
+    <div class="section-head center">
+      <span class="kicker reveal">10 heroes · all free</span>
+      <h2 class="title reveal" id="heroesTitle">Meet the <span class="gold">heroes</span></h2>
+      <p class="reveal">Every hero has a signature attack, a Super and a fighting style. Your trained stats set every number.</p>
     </div>
 
-    <div class="tabs reveal" role="tablist" aria-label="Feature areas" id="featTabs">
-      <button role="tab" aria-selected="true" data-tab="0" style="--c:var(--s-nut)"><svg class="ic"><use href="#i-utensils"/></svg>Nutrition<i></i></button>
-      <button role="tab" aria-selected="false" data-tab="1" style="--c:var(--s-str)"><svg class="ic"><use href="#i-dumbbell"/></svg>Fitness<i></i></button>
-      <button role="tab" aria-selected="false" data-tab="2" style="--c:var(--s-car)"><svg class="ic"><use href="#i-activity"/></svg>Cardio<i></i></button>
-      <button role="tab" aria-selected="false" data-tab="3" style="--c:var(--s-mind)"><svg class="ic"><use href="#i-moon"/></svg>Mind<i></i></button>
-      <button role="tab" aria-selected="false" data-tab="4" style="--c:var(--s-con)"><svg class="ic"><use href="#i-trophy"/></svg>Progress<i></i></button>
-    </div>
-
-    <div class="feat-stage reveal">
-      <div class="feat-panels">
-        <div class="feat-panel active" role="tabpanel" data-panel="0">
-          <h3>Log food the way that's easiest right now.</h3>
-          <ul class="feat-list">
-            <li><span class="fi c-orange"><svg class="ic"><use href="#i-camera"/></svg></span><div><b>Snap your plate <em class="tag">Premium</em></b><p>Photograph a meal for estimated calories, protein, carbs and fat. Review the portion, then log.</p></div></li>
-            <li><span class="fi c-orange"><svg class="ic"><use href="#i-mic"/></svg></span><div><b>Just say it <em class="tag">Premium</em></b><p>Describe what you ate out loud instead of typing every item.</p></div></li>
-            <li><span class="fi c-orange"><svg class="ic"><use href="#i-barcode"/></svg></span><div><b>Barcode, search or manual</b><p>Scan a packaged food, search the database, or enter the label yourself.</p></div></li>
-            <li><span class="fi c-orange"><svg class="ic"><use href="#i-droplet"/></svg></span><div><b>Calories, macros and water</b><p>Your day by meal, with macro progress, hydration and a weekly calorie chart.</p></div></li>
-          </ul>
-        </div>
-        <div class="feat-panel" role="tabpanel" data-panel="1">
-          <h3>Walk into the gym with a plan.</h3>
-          <ul class="feat-list">
-            <li><span class="fi c-red"><svg class="ic"><use href="#i-sparkles"/></svg></span><div><b>Suggested sessions</b><p>Pick muscle groups, 30, 45, 60 or 90 minutes, and your level. Preview it, regenerate, or start.</p></div></li>
-            <li><span class="fi c-red"><svg class="ic"><use href="#i-dumbbell"/></svg></span><div><b>Log every set</b><p>Weight, reps and completed sets, with session time and total volume tracked as you go.</p></div></li>
-            <li><span class="fi c-red"><svg class="ic"><use href="#i-chart"/></svg></span><div><b>Muscle progress</b><p>See volume per muscle group, when you last trained it, and an estimated recovery read.</p></div></li>
-            <li><span class="fi c-red"><svg class="ic"><use href="#i-trophy"/></svg></span><div><b>Finish strong</b><p>Wrap a session and see your XP, level progress and any personal records.</p></div></li>
-          </ul>
-        </div>
-        <div class="feat-panel" role="tabpanel" data-panel="2">
-          <h3>Every walk counts as a quest.</h3>
-          <ul class="feat-list">
-            <li><span class="fi c-green"><svg class="ic"><use href="#i-activity"/></svg></span><div><b>GPS tracking</b><p>Runs, walks, hikes, rides, paddles and more, with route, distance, pace and elevation when available.</p></div></li>
-            <li><span class="fi c-green"><svg class="ic"><use href="#i-route"/></svg></span><div><b>Find or draw a route</b><p>Discover nearby routes by distance and difficulty, or tap out your own loop and save it.</p></div></li>
-            <li><span class="fi c-green"><svg class="ic"><use href="#i-phone"/></svg></span><div><b>Live Activities</b><p>Keep your session stats on the Lock Screen and Dynamic Island.</p></div></li>
-            <li><span class="fi c-green"><svg class="ic"><use href="#i-share"/></svg></span><div><b>Make the post</b><p>Turn a finished session into a photo with your stats, or export a transparent route overlay.</p></div></li>
-          </ul>
-        </div>
-        <div class="feat-panel" role="tabpanel" data-panel="3">
-          <h3>Make room for a five‑minute reset.</h3>
-          <ul class="feat-list">
-            <li><span class="fi c-blue"><svg class="ic"><use href="#i-headphones"/></svg></span><div><b>Sleep, Calm, Focus, Stress</b><p>Browse audio sessions by what you need, and favorite the ones you love.</p></div></li>
-            <li><span class="fi c-blue"><svg class="ic"><use href="#i-timer"/></svg></span><div><b>Quick sessions</b><p>Start a 5, 10, 15 or 30‑minute meditation in a tap.</p></div></li>
-            <li><span class="fi c-blue"><svg class="ic"><use href="#i-sprout"/></svg></span><div><b>Grow a Mind Garden</b><p>Plants, a growing tree and collectible creatures, all fed by your sessions.</p></div></li>
-            <li><span class="fi c-blue"><svg class="ic"><use href="#i-moon"/></svg></span><div><b>Keeps playing</b><p>Audio continues with a mini player while you check the rest of your day.</p></div></li>
-          </ul>
-        </div>
-        <div class="feat-panel" role="tabpanel" data-panel="4">
-          <h3>Watch your consistency build.</h3>
-          <ul class="feat-list">
-            <li><span class="fi c-yellow"><svg class="ic"><use href="#i-zap"/></svg></span><div><b>XP, levels and streaks</b><p>Supported activities earn XP toward your next level, and one qualifying activity a day keeps your streak going.</p></div></li>
-            <li><span class="fi c-yellow"><svg class="ic"><use href="#i-grid"/></svg></span><div><b>26‑week heatmap</b><p>Half a year of training, at a glance.</p></div></li>
-            <li><span class="fi c-yellow"><svg class="ic"><use href="#i-trophy"/></svg></span><div><b>Badges and achievements</b><p>Unlock milestones for workouts, distance, meditation, nutrition and streaks, then share them.</p></div></li>
-            <li><span class="fi c-yellow"><svg class="ic"><use href="#i-chart"/></svg></span><div><b>Global leaderboard</b><p>See where your all‑time XP ranks, podium included.</p></div></li>
-          </ul>
-        </div>
+    <div class="roster" id="roster" data-class="bruiser">
+      <div class="roster-stage">
+        <button class="round-btn prev" id="heroPrev" aria-label="Previous hero"><svg class="ic"><use href="#i-left"/></svg></button>
+        <div class="pedestal" aria-hidden="true"><i></i></div>
+        <img class="roster-hero" id="heroImg" src="assets/arena/heroes/atlas.webp" alt="Atlas" width="560" height="840">
+        <button class="round-btn next" id="heroNext" aria-label="Next hero"><svg class="ic"><use href="#i-right"/></svg></button>
       </div>
-
-      <div class="feat-phone">
-        <div class="phone">
-          <div class="screen">
-            <img class="fs active" src="assets/screens/fridge-log.webp" alt="Logging a recipe as a meal with calories and macros" width="600" height="1378" loading="lazy">
-            <img class="fs" src="assets/screens/tour-workouts.webp" alt="Evolve workout suggestions screen" width="600" height="1304" loading="lazy">
-            <img class="fs" src="assets/screens/cardio.webp" alt="Evolve cardio stats and routes screen" width="600" height="1304" loading="lazy">
-            <img class="fs" src="assets/screens/mind.webp" alt="Evolve Mind tab with quick sessions and the Mind Garden" width="600" height="1304" loading="lazy">
-            <img class="fs" src="assets/screens/profile-stats.webp" alt="Evolve profile with balance score, heatmap and badges" width="600" height="1304" loading="lazy">
+      <div class="roster-info" aria-live="polite">
+        <span class="class-pill" id="heroClass">Bruiser</span>
+        <h3 class="hero-name" id="heroName">Atlas</h3>
+        <p class="hero-role" id="heroRole">Iron Brawler</p>
+        <p class="hero-blurb" id="heroBlurb">A powerlifter with steel gauntlets. Heavy and tough: wade in and slam everyone back.</p>
+        <div class="moves">
+          <div class="move">
+            <span class="move-label">Attack</span>
+            <b id="heroAttack">Iron Jab</b>
+            <span id="heroAttackDetail">Close-range blast of 5 pellets</span>
+          </div>
+          <div class="move move-super">
+            <span class="move-label"><svg class="ic"><use href="#i-bolt"/></svg>Super</span>
+            <b id="heroSuper">Ground Slam</b>
+            <span id="heroSuperDetail">Shockwave around you that throws enemies back and dazes them</span>
           </div>
         </div>
-        <div class="health-chip"><svg class="ic"><use href="#i-heart"/></svg>Works with Apple Health</div>
       </div>
     </div>
+
+    <div class="roster-picker" id="rosterPicker" role="tablist" aria-label="Choose a hero"></div>
   </div>
 </section>
 
-<!-- ================= FRIDGE AI ================= -->
-<section class="section" id="fridge">
-  <div class="wrap fridge-grid">
-    <div class="fridge-copy">
-      <span class="eyebrow reveal">05 · Fridge AI <em class="tag">Premium</em></span>
-      <h2 class="reveal">What's in your fridge?<br><span class="grad-text cool">Dinner, apparently.</span></h2>
-      <p class="reveal">Snap your fridge. Evolve spots the ingredients, you choose what to use, and it suggests recipes with cooking time and estimated macros. Make one, then log it in a tap.</p>
-      <ol class="steps reveal">
-        <li><b>Snap</b><span>Photo of your fridge</span></li>
-        <li><b>Pick</b><span>Choose your ingredients</span></li>
-        <li><b>Cook</b><span>Get recipe ideas</span></li>
-        <li><b>Log</b><span>Add it to your day</span></li>
-      </ol>
-
-      <div class="fridge-demo reveal">
-        <div class="fd-head">
-          <span class="mono"><b id="fdCount">17</b> of 17 selected</span>
-          <span><button class="link-btn" id="fdAll">Select all</button> · <button class="link-btn" id="fdNone">Clear</button></span>
-        </div>
-        <div class="chips" id="fdChips"></div>
-        <div class="recipes" id="fdRecipes"></div>
-        <p class="fine">Ingredients and recipes from a real Fridge AI scan. AI can miss items, recipes may need a few extras, and fridge scans have a daily limit.</p>
-      </div>
-    </div>
-
-    <div class="fridge-phone reveal">
-      <div class="phone">
-        <div class="screen">
-          <video data-src="assets/video/fridge-scan.mp4" data-poster="assets/video/fridge-poster.webp" muted loop playsinline preload="none" aria-label="Screen recording: scanning a fridge, selecting ingredients and getting recipe ideas"></video>
-        </div>
-      </div>
-      <div class="scan-tag mono"><span class="scan-dot"></span>Scanning fridge…</div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= BADGES ================= -->
-<section class="section section-badges" id="badges">
+<!-- ================= MODES ================= -->
+<section class="modes sky" id="modes">
   <div class="wrap">
-    <div class="center-head">
-      <span class="eyebrow reveal">06 · Trophy shelf</span>
-      <h2 class="reveal">Small milestones.<br>Screenshot‑worthy moments.</h2>
-      <p class="reveal">From your first workout to your 365th meditation, badges mark the moments that matter. Tap one to unlock it. Here, anyway; in the app you'll have to earn it.</p>
+    <div class="section-head center">
+      <span class="kicker reveal">Solo, duo or squad</span>
+      <h2 class="title reveal">Pick your <span class="gold">battle</span></h2>
+      <p class="reveal">Six ways to fight, from a quick duel to a four-team flag war. Play online with friends or against bots.</p>
     </div>
-    <div class="shelf-meta reveal"><span class="mono"><b id="badgeCount">0</b> / 14 unlocked</span><span class="mono shelf-desc" id="badgeDesc">Tap a badge</span></div>
-    <div class="shelf reveal" id="shelf"></div>
+    <div class="mode-grid">
+      <article class="mode reveal" style="--m:#ff9a2e;--m2:#c2410c">
+        <div class="mode-art"><img class="pose" src="assets/arena/heroes/atlas.webp" alt="" loading="lazy"><img class="pose" src="assets/arena/heroes/cortex.webp" alt="" loading="lazy"></div>
+        <span class="mode-size">1v1</span>
+        <h3>Duel</h3>
+        <p>Just you and one rival. Knock them out to win.</p>
+      </article>
+      <article class="mode reveal" style="--m:#5b9bff;--m2:#1d3fae">
+        <div class="mode-art"><img class="pose" src="assets/arena/heroes/ion.webp" alt="" loading="lazy"><img class="pose" src="assets/arena/heroes/atlas.webp" alt="" loading="lazy"><img class="pose" src="assets/arena/heroes/salvo.webp" alt="" loading="lazy"></div>
+        <span class="mode-size">3v3</span>
+        <h3>Takedown</h3>
+        <p>Team up with two heroes. Every knockout scores; first team to 8 wins.</p>
+      </article>
+      <article class="mode reveal" style="--m:#36d17f;--m2:#0f7a43">
+        <div class="mode-art"><img class="pose" src="assets/arena/heroes/quake.webp" alt="" loading="lazy"><img class="pose" src="assets/arena/heroes/shade.webp" alt="" loading="lazy"></div>
+        <span class="mode-size">3v3</span>
+        <h3>Capture the Flag</h3>
+        <p>Run their flag home, first to 3. About to go down? Throw it to a teammate.</p>
+      </article>
+      <article class="mode reveal" style="--m:#ff5ca3;--m2:#a3135a">
+        <div class="mode-art"><img class="pose" src="assets/arena/heroes/ventus.webp" alt="" loading="lazy"><img class="pose" src="assets/arena/heroes/shade.webp" alt="" loading="lazy"></div>
+        <span class="mode-size">2v2v2v2</span>
+        <h3>Duo Showdown</h3>
+        <p>Four duos, one storm. Knock rivals out to steal their DNA and evolve. Last duo standing wins.</p>
+      </article>
+      <article class="mode reveal" style="--m:#22c3b5;--m2:#0b6d73">
+        <div class="mode-art"><img class="pose" src="assets/arena/heroes/talon.webp" alt="" loading="lazy"><img class="pose" src="assets/arena/heroes/salvo.webp" alt="" loading="lazy"><img class="pose" src="assets/arena/heroes/ion.webp" alt="" loading="lazy"></div>
+        <span class="mode-size">4 teams of 3</span>
+        <h3>4-Way Flags</h3>
+        <p>Four teams, four bases. Your three flags are held by your rivals: take them back and run them home.</p>
+      </article>
+      <article class="mode reveal" style="--m:#9e6bff;--m2:#4c1d95">
+        <div class="mode-art"><img class="pose" src="assets/arena/heroes/kryll.webp" alt="" loading="lazy"><img class="pose" src="assets/arena/heroes/volt.webp" alt="" loading="lazy"><img class="pose" src="assets/arena/heroes/talon.webp" alt="" loading="lazy"></div>
+        <span class="mode-size">6-hero free-for-all</span>
+        <h3>DNA Drops</h3>
+        <p>Six heroes, all for themselves. Grab spilled DNA to evolve, then survive 10 seconds at Apex.</p>
+      </article>
+    </div>
+    <div class="party reveal">
+      <svg class="ic"><use href="#i-users"/></svg>
+      <p><b>Battle friends online.</b> Add them with a friend code or invite link, party up and ready up.</p>
+    </div>
   </div>
 </section>
 
-<!-- ================= WARDROBE ================= -->
-<section class="section section-wardrobe" id="wardrobe">
+<!-- ================= TRAINING ================= -->
+<section class="training" id="training">
+  <div class="wrap training-grid">
+    <div class="training-copy">
+      <span class="kicker reveal">The Evolve twist</span>
+      <h2 class="title reveal">Your training<br><span class="gold">powers your hero</span></h2>
+      <p class="reveal">Your real stats set your hero's power in every battle. Log it in Evolve, feel it in the Arena. Try it:</p>
+      <div class="train-buttons reveal" id="trainButtons">
+        <button class="train-btn" data-stat="strength" style="--t:#ff7a3d"><svg class="ic"><use href="#i-dumbbell"/></svg><span><b>Lift</b>Strength · hits harder</span></button>
+        <button class="train-btn" data-stat="cardio" style="--t:#39c6ff"><svg class="ic"><use href="#i-run"/></svg><span><b>Run</b>Cardio · moves faster</span></button>
+        <button class="train-btn" data-stat="mind" style="--t:#a77bff"><svg class="ic"><use href="#i-mind"/></svg><span><b>Meditate</b>Mind · reloads quicker</span></button>
+        <button class="train-btn" data-stat="nutrition" style="--t:#39d98a"><svg class="ic"><use href="#i-apple-fruit"/></svg><span><b>Eat well</b>Nutrition · more health</span></button>
+        <button class="train-btn" data-stat="consistency" style="--t:#ffc83d"><svg class="ic"><use href="#i-flame"/></svg><span><b>Keep the streak</b>Consistency · more health</span></button>
+      </div>
+    </div>
+
+    <div class="power-card reveal" id="powerCard" aria-live="polite">
+      <div class="power-top">
+        <img src="assets/arena/heroes/atlas.webp" alt="" width="560" height="840" loading="lazy">
+        <div>
+          <span class="power-lvl">LVL <b id="pcLevel">1</b></span>
+          <h3>Your hero</h3>
+          <span class="power-xp"><i id="pcXp"></i></span>
+        </div>
+      </div>
+      <ul class="power-stats">
+        <li data-bar="hp"><span>Health</span><i><b></b></i></li>
+        <li data-bar="dmg"><span>Damage</span><i><b></b></i></li>
+        <li data-bar="spd"><span>Speed</span><i><b></b></i></li>
+        <li data-bar="rel"><span>Reload</span><i><b></b></i></li>
+      </ul>
+      <p class="power-note">Illustration. In the app, every hero's health, speed, damage and reload come from your own trained stats.</p>
+      <div class="power-pop" id="pcPop" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <div class="wrap life-grid">
+    <div class="life reveal">
+      <h3>Calorie &amp; macro tracking</h3>
+      <p>Track calories, protein, carbs and fat. Search foods, scan barcodes, log water. Premium adds AI meal photos, voice logging and the "What's in my fridge?" scanner.</p>
+    </div>
+    <div class="life reveal">
+      <h3>Workouts, cardio &amp; routes</h3>
+      <p>Log sets, reps and weights, track walks and runs, and draw routes that follow walkable paths. Connects with Apple Health.</p>
+    </div>
+    <div class="life reveal">
+      <h3>Meditation &amp; habits</h3>
+      <p>Mindful breaks, calming audio for sleep and focus, a meditation garden that grows, and streaks to keep alive.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REWARDS ================= -->
+<section class="rewards sky" id="rewards">
+  <div class="wrap rewards-grid">
+    <div>
+      <span class="kicker reveal">Earned, never sold</span>
+      <h2 class="title reveal">Open chests.<br><span class="gold">Unlock skins.</span></h2>
+      <p class="reveal">Free daily chests, coins, hero skins and a trophy road to climb, where a loss never drops a rank you've reached. Chests and coins come from playing; they can't be bought.</p>
+      <div class="chests reveal" id="chests">
+        <button class="chest" data-rarity="common" aria-label="Open the common chest"><img src="assets/arena/chests/common.webp" alt="" loading="lazy"><span>Common</span></button>
+        <button class="chest" data-rarity="rare" aria-label="Open the rare chest"><img src="assets/arena/chests/rare.webp" alt="" loading="lazy"><span>Rare</span></button>
+        <button class="chest" data-rarity="epic" aria-label="Open the epic chest"><img src="assets/arena/chests/epic.webp" alt="" loading="lazy"><span>Epic</span></button>
+        <button class="chest" data-rarity="legendary" aria-label="Open the legendary chest"><img src="assets/arena/chests/legendary.webp" alt="" loading="lazy"><span>Legendary</span></button>
+      </div>
+      <p class="chest-hint reveal">Tap a chest.</p>
+    </div>
+    <div class="skins reveal">
+      <figure class="skin" style="--s:#3fd6ff"><img src="assets/arena/skins/salvo_mech_strike.webp" alt="Salvo in the Mech Strike skin" loading="lazy"><figcaption><b>Mech Strike</b>Salvo · Legendary</figcaption></figure>
+      <figure class="skin" style="--s:#ff8a1f"><img src="assets/arena/skins/salvo_pumpkin_raider.webp" alt="Salvo in the Pumpkin Raider skin" loading="lazy"><figcaption><b>Pumpkin Raider</b>Salvo</figcaption></figure>
+      <figure class="skin" style="--s:#9bd36a"><img src="assets/arena/skins/quake_siege_titan.webp" alt="Quake in the Siege Titan skin" loading="lazy"><figcaption><b>Siege Titan</b>Quake</figcaption></figure>
+      <figure class="skin" style="--s:#b7a6ff"><img src="assets/arena/skins/quake_graveyard_giant.webp" alt="Quake in the Graveyard Giant skin" loading="lazy"><figcaption><b>Graveyard Giant</b>Quake</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WORLDS ================= -->
+<section class="worlds" id="worlds">
+  <img class="skyship s1" src="assets/arena/fx/aurelia_skyship_saucer.webp" alt="" aria-hidden="true" loading="lazy">
+  <img class="skyship s2" src="assets/arena/fx/aurelia_skyship_shuttle.webp" alt="" aria-hidden="true" loading="lazy">
   <div class="wrap">
-    <div class="center-head">
-      <span class="eyebrow reveal">07 · The wardrobe</span>
-      <h2 class="reveal">Suit up.<br>Then climb the podium.</h2>
-      <p class="reveal">Try on suits from the Gear, Style, Premium and Ranked collections before you equip them. The podium suits are different: only the player holding that exact global rank can wear one.</p>
+    <div class="section-head center">
+      <span class="kicker reveal">The Journey</span>
+      <h2 class="title reveal">Battle across <span class="gold">six worlds</span></h2>
+      <p class="reveal">A Journey of boss battles across five worlds, plus the Aurelia Colosseum.</p>
     </div>
+  </div>
+  <div class="world-strip" id="worldStrip">
+    <button class="world is-open" style="--w:#ffb547"><img src="assets/arena/worlds/sunset_shore.webp" alt="" loading="lazy"><span><small>World 1</small>Sunset Shore</span></button>
+    <button class="world" style="--w:#ff4fd8"><img src="assets/arena/worlds/neon_metropolis.webp" alt="" loading="lazy"><span><small>World 2</small>Neon Metropolis</span></button>
+    <button class="world" style="--w:#7fe0ff"><img src="assets/arena/worlds/aurora_peaks.webp" alt="" loading="lazy"><span><small>World 3</small>Aurora Peaks</span></button>
+    <button class="world" style="--w:#ff9ec7"><img src="assets/arena/worlds/sakura_sanctuary.webp" alt="" loading="lazy"><span><small>World 4</small>Sakura Sanctuary</span></button>
+    <button class="world" style="--w:#b47bff"><img src="assets/arena/worlds/cosmos.webp" alt="" loading="lazy"><span><small>World 5</small>Cosmos</span></button>
+    <button class="world" style="--w:#ffd56a"><img src="assets/arena/worlds/aurelia_colosseum.webp" alt="" loading="lazy"><span><small>Main arena</small>Aurelia Colosseum</span></button>
+  </div>
+</section>
 
-    <div class="toggles reveal">
-      <div class="seg" role="group" aria-label="Character">
-        <button aria-pressed="true" data-g="male">Male</button>
-        <button aria-pressed="false" data-g="female">Female</button>
-      </div>
-      <div class="seg" role="group" aria-label="Apex GOAT style">
-        <button aria-pressed="true" data-goat="classic">Classic GOAT</button>
-        <button aria-pressed="false" data-goat="heroic">Heroic GOAT</button>
-      </div>
+<!-- ================= GALLERY (Supercell-style carousel) ================= -->
+<section class="gallery stone" id="gallery">
+  <div class="wrap gallery-head">
+    <h2 class="title reveal">In the <span class="gold">Arena</span></h2>
+    <div class="gallery-nav">
+      <button class="round-btn" id="galPrev" aria-label="Scroll back"><svg class="ic"><use href="#i-left"/></svg></button>
+      <button class="round-btn" id="galNext" aria-label="Scroll forward"><svg class="ic"><use href="#i-right"/></svg></button>
     </div>
+  </div>
+  <div class="gallery-track" id="galTrack" tabindex="0" aria-label="Evolve Arena screenshots">
+    <img src="assets/arena/panels/01-brawls-in-3d.webp" alt="Fast-paced 3v3 brawls in 3D" width="560" height="1217" loading="lazy">
+    <img src="assets/arena/panels/02-unleash-your-super.webp" alt="Unleash your Super" width="560" height="1217" loading="lazy">
+    <img src="assets/arena/panels/03-capture-the-flag.webp" alt="Capture the Flag: race for glory" width="560" height="1217" loading="lazy">
+    <img src="assets/arena/panels/04-find-your-fighter.webp" alt="Find your fighter" width="560" height="1217" loading="lazy">
+    <img src="assets/arena/panels/05-training-powers-your-hero.webp" alt="Your training, your power" width="560" height="1217" loading="lazy">
+    <img src="assets/arena/panels/06-fuel-your-hero.webp" alt="Track meals, fuel your hero" width="560" height="1217" loading="lazy">
+    <img src="assets/arena/panels/07-plan-your-next-route.webp" alt="Plan your next route" width="560" height="1217" loading="lazy">
+    <img src="assets/arena/panels/08-five-worlds.webp" alt="Battle across five worlds" width="560" height="1217" loading="lazy">
+    <img src="assets/arena/panels/09-open-chests-unlock-skins.webp" alt="Open chests, unlock skins" width="560" height="1217" loading="lazy">
+  </div>
+</section>
 
-    <div class="podium reveal" id="podium">
-      <figure class="pod pod-2">
-        <img src="assets/suits/grand-champion-male.webp" data-suit="grand-champion" alt="Grand Champion suit" loading="lazy" width="556" height="760">
-        <figcaption><span class="rank mono">#2</span><b>Grand Champion</b><small>Global rank #2 only</small></figcaption>
-        <div class="block"><span>2</span></div>
-      </figure>
-      <figure class="pod pod-1">
-        <div class="crown-glow"></div>
-        <img src="assets/suits/apex-goat-classic.webp" id="goatImg" alt="Apex GOAT suit" loading="lazy" width="418" height="760">
-        <figcaption><span class="rank mono">#1</span><b>Apex GOAT</b><small>Exactly one person on Earth</small></figcaption>
-        <div class="block"><span>1</span></div>
-      </figure>
-      <figure class="pod pod-3">
-        <img src="assets/suits/podium-champion-male.webp" data-suit="podium-champion" alt="Podium Champion suit" loading="lazy" width="414" height="760">
-        <figcaption><span class="rank mono">#3</span><b>Podium Champion</b><small>Global rank #3 only</small></figcaption>
-        <div class="block"><span>3</span></div>
-      </figure>
+<!-- ================= FOLLOW ================= -->
+<section class="follow" id="follow">
+  <div class="wrap follow-grid">
+    <div class="phone phone-tilt reveal">
+      <div class="phone-screen"><img class="is-on" src="assets/arena/shots/victory.webp" alt="A 3v3 victory screen: trophies, a win streak and a chest to open." width="620" height="1347" loading="lazy"></div>
     </div>
-
-    <div class="rack-head reveal">
-      <h3>More suits to try on</h3>
-      <div class="rack-nav">
-        <button class="round" id="rackPrev" aria-label="Scroll suits left"><svg class="ic" style="transform:rotate(180deg)"><use href="#i-arrow"/></svg></button>
-        <button class="round" id="rackNext" aria-label="Scroll suits right"><svg class="ic"><use href="#i-arrow"/></svg></button>
+    <div>
+      <h2 class="title reveal">See the <span class="gold">latest</span></h2>
+      <p class="reveal">New heroes, skins, maps and balance changes land in the app first. Follow along for sneak peeks, behind-the-scenes clips and the Evolve IRL show.</p>
+      <span class="follow-label reveal">Follow Evolve on</span>
+      <div class="socials reveal">
+        <a href="https://www.tiktok.com/@evolveirlshow" aria-label="Evolve on TikTok" rel="noopener" target="_blank"><svg class="ic"><use href="#i-tiktok"/></svg></a>
+        <a href="https://www.instagram.com/evolveirlshow/" aria-label="Evolve on Instagram" rel="noopener" target="_blank"><svg class="ic"><use href="#i-instagram"/></svg></a>
+        <a href="https://www.youtube.com/@EvolveIRLShow" aria-label="Evolve on YouTube" rel="noopener" target="_blank"><svg class="ic"><use href="#i-youtube"/></svg></a>
       </div>
     </div>
-    <div class="rack reveal" id="rack"></div>
   </div>
 </section>
 
 <!-- ================= FAQ ================= -->
-<section class="section" id="faq">
+<section class="faq-sec sky" id="faq">
   <div class="wrap faq-grid">
     <div>
-      <span class="eyebrow reveal">08 · FAQ</span>
-      <h2 class="reveal">Questions,<br>answered.</h2>
+      <h2 class="title reveal">Questions,<br><span class="gold">answered</span></h2>
       <p class="reveal">Need more help? Visit <a href="/support/">Support</a>.</p>
     </div>
     <div class="faq reveal">
       <details>
-        <summary>What is Evolve Arena?<svg class="ic"><use href="#i-down"/></svg></summary>
-        <p>An iPhone app that puts workouts, cardio, nutrition and meditation in one place, then turns what you log into XP, levels, five stats and a 40‑stage Journey. The idea is simple: your real‑life effort should be something you can see.</p>
+        <summary>Is Evolve Arena free?</summary>
+        <p>Yes. The Arena and all 10 heroes are free, along with food and water logging, workout logging, cardio tools and habit tracking. An optional Premium subscription unlocks Premium hero skins, AI meal scanning, AI voice food logging and fridge scanning.</p>
       </details>
       <details>
-        <summary>Do I have to finish all three daily quests to keep my streak?<svg class="ic"><use href="#i-down"/></svg></summary>
-        <p>No. One qualifying workout, meal log or meditation keeps your streak alive for the day. The other two quests are extra XP.</p>
+        <summary>Do I have to work out to play?</summary>
+        <p>No, you can jump straight into battles. Training just makes your hero stronger: your real strength, cardio, mind, nutrition and consistency stats set your hero's power.</p>
       </details>
       <details>
-        <summary>What comes with Premium?<svg class="ic"><use href="#i-down"/></svg></summary>
-        <p>Premium unlocks the AI features: photo food scanning, voice food logging and Fridge AI, which has a daily scan limit. It also includes the Hero Collection suits. Current pricing is on the App Store listing.</p>
+        <summary>Can I play with friends?</summary>
+        <p>Yes. Add friends with a friend code or invite link, party up, pick a mode and map, and ready up. You can also play every mode against bots.</p>
       </details>
       <details>
-        <summary>How accurate are the calorie estimates?<svg class="ic"><use href="#i-down"/></svg></summary>
-        <p>Photo and voice logs are AI estimates, not lab measurements. You see what was detected, adjust the portion, and choose the meal before anything gets logged.</p>
+        <summary>Is there chat?</summary>
+        <p>No. There's no text or voice chat. Other players see only your hero name, the hero you play and preset emote pins. Hero names are checked against a blocklist, and friends can only be added with a code or link.</p>
       </details>
       <details>
-        <summary>Does Evolve work with Apple Health?<svg class="ic"><use href="#i-down"/></svg></summary>
-        <p>Yes. With your permission, Evolve can read available steps, distance, active calories, heart rate and workouts from Apple Health, and import supported workouts, including routes when they're available.</p>
+        <summary>I used Evolve before. Is my progress still there?</summary>
+        <p>Yes. Evolve is now Evolve Arena. Calorie and macro tracking, workouts, cardio routes, habits and meditation are all still here, your progress carries over, and the Arena opens from Home.</p>
       </details>
       <details>
-        <summary>Are the bosses actual fights?<svg class="ic"><use href="#i-down"/></svg></summary>
-        <p>They're milestones. Each boss guards the last stage of a region on your Journey. Meet its real‑life requirements (workouts, streaks, meditation minutes, meals) and you claim the victory.</p>
+        <summary>Does it work with Apple Health?</summary>
+        <p>Yes. With your permission, Evolve Arena syncs supported fitness data from Apple Health. You control those permissions and can manage or delete your account in the app.</p>
       </details>
     </div>
   </div>
 </section>
 
-<!-- ================= CTA ================= -->
-<section class="cta" id="download">
-  <div class="cta-bg" aria-hidden="true"><div class="aurora a1"></div><div class="aurora a2"></div><div class="stars"></div></div>
-  <div class="wrap cta-inner">
-    <button class="dragon" id="dragon" aria-label="Say hi to the dragon">
-      <img src="assets/img/dragon.webp" alt="" width="471" height="558" loading="lazy">
-      <span class="dragon-bubble" id="dragonBubble">Hey, you!</span>
-    </button>
-    <h2 class="reveal">Hey, you.<br><span class="grad-text">Ready to evolve?</span></h2>
-    <p class="reveal">Your first quest is waiting. A little movement, a little more momentum.</p>
-    <a class="store-btn store-btn-lg reveal" href="https://apps.apple.com/us/app/evolve-calorie-tracker/id6743642232" data-store>
-      <svg class="ic ic-fill"><use href="#i-apple"/></svg>
-      <span><small>Download on the</small>App Store</span>
-    </a>
-    <div class="irl reveal">
-      <span>Watch the bosses on <b>Evolve IRL</b></span>
-      <div class="socials">
-        <a href="https://www.tiktok.com/@evolveirlshow" aria-label="Evolve IRL on TikTok" rel="noopener" target="_blank"><svg class="ic"><use href="#i-tiktok"/></svg></a>
-        <a href="https://www.instagram.com/evolveirlshow/" aria-label="Evolve IRL on Instagram" rel="noopener" target="_blank"><svg class="ic"><use href="#i-instagram"/></svg></a>
-        <a href="https://www.youtube.com/@EvolveIRLShow" aria-label="Evolve IRL on YouTube" rel="noopener" target="_blank"><svg class="ic"><use href="#i-youtube"/></svg></a>
-      </div>
+<!-- ================= CREATORS (Supercell's "work with us" band) ================= -->
+<section class="creators-band">
+  <div class="wrap creators-inner">
+    <div>
+      <h2 class="title reveal">Make videos? <span class="gold">Join the creator program</span></h2>
+      <p class="reveal">Get your own creator code. Players can enter it in the Arena Store to support you.</p>
+      <a class="btn btn-gold reveal" href="/creators/">Apply now <svg class="ic"><use href="#i-arrow"/></svg></a>
     </div>
+    <img class="creators-hero" src="assets/arena/heroes/salvo.webp" alt="" loading="lazy" width="560" height="840">
   </div>
 </section>
 
 </main>
 
+<!-- ================= FOOTER ================= -->
 <footer class="footer">
-  <div class="wrap footer-inner">
-    <a class="brand" href="/"><img src="assets/img/icon-256.png" alt="" width="28" height="28" loading="lazy"><span>Evolve</span></a>
-    <nav aria-label="Footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="brand" href="/"><img src="assets/arena/icon-256.webp" alt="" width="40" height="40" loading="lazy"><span class="brand-word"><b>Evolve</b><i>Arena</i></span></a>
+        <span class="follow-label">Follow us on</span>
+        <div class="socials socials-sm">
+          <a href="https://www.tiktok.com/@evolveirlshow" aria-label="Evolve on TikTok" rel="noopener" target="_blank"><svg class="ic"><use href="#i-tiktok"/></svg></a>
+          <a href="https://www.instagram.com/evolveirlshow/" aria-label="Evolve on Instagram" rel="noopener" target="_blank"><svg class="ic"><use href="#i-instagram"/></svg></a>
+          <a href="https://www.youtube.com/@EvolveIRLShow" aria-label="Evolve on YouTube" rel="noopener" target="_blank"><svg class="ic"><use href="#i-youtube"/></svg></a>
+        </div>
+      </div>
+      <a class="appstore appstore-dark" href="https://apps.apple.com/app/id6743642232" data-store aria-label="Download Evolve Arena on the App Store">
+        <svg class="ic"><use href="#i-apple"/></svg><span><small>Download on the</small>App Store</span>
+      </a>
+    </div>
+    <nav class="footer-links" aria-label="Footer">
       <a href="/support/">Support</a>
       <a href="/creators/">Creator Program</a>
       <a href="/terms.html">Terms &amp; Conditions</a>
       <a href="/privacy.html">Privacy Policy</a>
     </nav>
-    <p class="legal">© <span id="year">2026</span> Evolve. Apple, the Apple logo and iPhone are trademarks of Apple Inc. Evolve provides estimates for general wellness and is not medical advice.</p>
+    <p class="legal">© <span id="year">2026</span> Evolve. Apple, the Apple logo and iPhone are trademarks of Apple Inc. Evolve Arena provides estimates for general wellness and is not medical advice.</p>
   </div>
 </footer>
 
 <canvas id="confetti" aria-hidden="true"></canvas>
-<script src="home.js" defer></script>
+<script src="arena.js" defer></script>
 </body>
 </html>
