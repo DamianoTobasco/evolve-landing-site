@@ -1,141 +1,331 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover"
-    />
-    <title>Evolve | Support</title>
-    <meta
-      name="description"
-      content="Contact Evolve support for help with your account, subscriptions, or app issues."
-    />
-    <link rel="icon" type="image/svg+xml" href="../assets/evolve-app-icon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../styles.css" />
-    <script src="support.js" defer></script>
-  </head>
-  <body class="terms-page support-page">
-    <div class="background-haze background-haze-a" aria-hidden="true"></div>
-    <div class="background-haze background-haze-b" aria-hidden="true"></div>
-    <div class="background-rings" aria-hidden="true"></div>
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Support — Evolve Arena</title>
+  <meta name="description" content="Help with Evolve Arena: your account, Premium and billing, Arena battles, chests, friends, Apple Health, and how to contact the Evolve team.">
+  <meta name="theme-color" content="#0a1238">
+  <script>document.documentElement.className = "js";</script>
+  <link rel="canonical" href="https://theevolve.app/support/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://theevolve.app/support/">
+  <meta property="og:title" content="Evolve Arena Support">
+  <meta property="og:description" content="Answers for the Arena, your account, Premium and tracking, and how to reach the Evolve team.">
+  <meta property="og:image" content="https://theevolve.app/assets/arena/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="apple-itunes-app" content="app-id=6743642232">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/arena/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/assets/arena/favicon-64.png">
+  <link rel="apple-touch-icon" href="/assets/arena/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@600;700;800;900&display=swap"></noscript>
+  <link rel="stylesheet" href="/arena.css">
+</head>
+<body class="page-support">
 
-    <div class="site-shell terms-shell">
-      <header class="topbar">
-        <a class="brand" href="../" aria-label="Back to Evolve landing page">
-          <span class="brand-mark">
-            <img src="../assets/evolve-app-icon.svg" alt="Evolve app icon" />
-          </span>
-          <span class="brand-copy">
-            <span class="brand-name">Evolve</span>
-            <span class="brand-tag">Support</span>
-          </span>
-        </a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-apple" viewBox="0 0 24 24"><path fill="currentColor" d="M16.37 1.43c0 1.14-.42 2.2-1.12 2.98-.84.94-2.2 1.66-3.3 1.57-.14-1.1.41-2.26 1.1-3 .78-.86 2.12-1.5 3.32-1.55ZM20.5 17.1c-.56 1.3-.83 1.88-1.55 3.03-1 1.6-2.42 3.6-4.18 3.62-1.56.01-1.96-1.02-4.08-1-2.12.01-2.56 1.02-4.12 1-1.76-.02-3.1-1.82-4.11-3.42-2.82-4.48-3.12-9.74-1.38-12.53 1.24-1.98 3.2-3.14 5.03-3.14 1.87 0 3.05 1.03 4.6 1.03 1.5 0 2.42-1.03 4.58-1.03 1.64 0 3.37.89 4.6 2.43-4.04 2.22-3.39 8 .61 10.01Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 5l7 7-7 7"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="currentColor" d="M13.2 2.2 4.6 13.1c-.4.5 0 1.2.6 1.2h5.3l-1.4 7.2c-.1.7.8 1.1 1.2.5l8.6-10.9c.4-.5 0-1.2-.6-1.2H13l1.4-7.2c.1-.7-.8-1.1-1.2-.5Z"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5M16 4.8a3.5 3.5 0 0 1 0 6.4M18.5 14.8c1.7.8 2.8 2.5 3 5.2"/></g></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" d="M12 2.8 4.5 5.6v5.9c0 4.7 3.1 8.2 7.5 9.7 4.4-1.5 7.5-5 7.5-9.7V5.6Z"/><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m8.8 12 2.2 2.2 4.3-4.4"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2"><rect width="18" height="18" x="3" y="3" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></g></symbol>
+    <symbol id="i-youtube" viewBox="0 0 24 24"><path fill="currentColor" d="M21.6 7.2a2.6 2.6 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.6 2.6 0 0 0 2.4 7.2 27 27 0 0 0 2 12a27 27 0 0 0 .4 4.8 2.6 2.6 0 0 0 1.8 1.8c1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4a2.6 2.6 0 0 0 1.8-1.8A27 27 0 0 0 22 12a27 27 0 0 0-.4-4.8ZM10 15.1V8.9l5.2 3.1Z"/></symbol>
+    <symbol id="i-tiktok" viewBox="0 0 24 24"><path fill="currentColor" d="M16.6 2h-3.4v13.4a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9.2a6.3 6.3 0 1 0 5.4 6.2V8.6a7.6 7.6 0 0 0 4.4 1.4V6.6a4.4 4.4 0 0 1-4.4-4.6Z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></g></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c.8-4.2 4-6.5 8-6.5s7.2 2.3 8 6.5"/></g></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.4C.9 8 3.2 4 7 4c2.1 0 3.6 1.1 5 2.8C13.4 5.1 14.9 4 17 4c3.8 0 6.1 4 4.6 7.6C19.5 16.4 12 21 12 21Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></g></symbol>
+  </defs>
+</svg>
 
-        <a class="topbar-link" href="../">Back to site</a>
-      </header>
+<a class="skip" href="#main">Skip to content</a>
 
-      <main class="terms-content">
-        <section class="terms-card support-card">
-          <div class="support-grid">
-            <div class="support-copy">
-              <p class="eyebrow">SUPPORT</p>
-              <h1>Contact Evolve support.</h1>
-              <p class="terms-intro">
-                Need help with your account, a subscription, or the app itself?
-                Email us and we will get back to you as soon as we can.
-              </p>
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="/" aria-label="Evolve Arena home">
+      <img src="/assets/arena/icon-256.webp" alt="" width="40" height="40">
+      <span class="brand-word"><b>Evolve</b><i>Arena</i></span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="/#game">The Game</a>
+      <a href="/#heroes">Heroes</a>
+      <a href="/#modes">Modes</a>
+      <a href="/#training">Training</a>
+      <a href="/#worlds">Worlds</a>
+      <a href="/#news">News</a>
+      <a href="/support/" class="is-active" aria-current="page">Support</a>
+    </nav>
+    <a class="btn btn-gold btn-sm nav-cta" href="https://apps.apple.com/app/id6743642232">
+      <svg class="ic"><use href="#i-apple"/></svg><span>Play free</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <svg class="ic ic-open"><use href="#i-menu"/></svg><svg class="ic ic-close"><use href="#i-close"/></svg>
+    </button>
+  </div>
+</header>
 
-              <div class="support-direct">
-                <p class="support-label">Direct email</p>
-                <a class="support-email-link" href="mailto:evolve@theevolve.app">
-                  evolve@theevolve.app
-                </a>
-              </div>
+<main id="main">
 
-              <div class="support-notes">
-                <div class="support-note">
-                  <h2>Fastest way to reach us</h2>
-                  <p>
-                    Use the email button or form on this page. It opens your
-                    mail app with the details prefilled.
-                  </p>
-                </div>
-
-                <div class="support-note">
-                  <h2>Helpful details to include</h2>
-                  <p>
-                    Tell us what device you use, the issue you hit, and whether
-                    the problem is related to billing, login, or app behavior.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="support-form-card">
-              <form class="support-form" data-support-form>
-                <label>
-                  <span>Name</span>
-                  <input type="text" name="name" placeholder="Your name" />
-                </label>
-
-                <label>
-                  <span>Email</span>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="you@example.com"
-                    inputmode="email"
-                  />
-                </label>
-
-                <label>
-                  <span>Issue type</span>
-                  <select name="issue">
-                    <option value="General support">General support</option>
-                    <option value="Account help">Account help</option>
-                    <option value="Billing question">Billing question</option>
-                    <option value="Bug report">Bug report</option>
-                    <option value="Feature request">Feature request</option>
-                  </select>
-                </label>
-
-                <label>
-                  <span>Message</span>
-                  <textarea
-                    name="message"
-                    rows="6"
-                    placeholder="Tell us what happened and how we can help."
-                    required
-                  ></textarea>
-                </label>
-
-                <button class="support-submit" type="submit">
-                  Email support
-                </button>
-              </form>
-
-              <p class="support-form-note">
-                This opens your email app with a prefilled message. If no mail
-                app is configured on your device, email us directly at
-                <a href="mailto:evolve@theevolve.app">evolve@theevolve.app</a>.
-              </p>
-            </div>
-          </div>
-
-          <p class="legal-links terms-links">
-            <a href="../terms.html">Terms &amp; Conditions</a>
-            <span aria-hidden="true">•</span>
-            <a href="../privacy.html">Privacy Policy</a>
-          </p>
-        </section>
-      </main>
+<!-- ================= HELP HERO ================= -->
+<section class="help-hero sky">
+  <div class="clouds" aria-hidden="true">
+    <img class="cloud c1" src="/assets/arena/fx/cloud_a.webp" alt="">
+    <img class="cloud c2" src="/assets/arena/fx/cloud_puff.webp" alt="">
+  </div>
+  <div class="wrap help-hero-inner">
+    <div class="help-hero-copy">
+      <span class="kicker">Player support</span>
+      <h1 class="title">How can we <span class="gold">help?</span></h1>
+      <p>Answers for the Arena, your account, Premium and tracking. Can&rsquo;t find yours? Send us a message.</p>
+      <label class="help-search">
+        <svg class="ic" aria-hidden="true"><use href="#i-search"/></svg>
+        <span class="sr-only">Search help</span>
+        <input id="helpSearch" type="search" placeholder="Search: refund, friends, chests, delete account…" autocomplete="off">
+      </label>
+      <p class="help-search-empty" id="helpEmpty" hidden>No answers match that. Try another word, or <a href="#contact">email us</a>.</p>
     </div>
-  </body>
+    <div class="help-hero-art" aria-hidden="true">
+      <img class="help-hero-ion" src="/assets/arena/heroes/ion.webp" alt="" width="560" height="840">
+      <span class="help-bubble">Need a hand?</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TOPICS ================= -->
+<section class="topics stone">
+  <div class="wrap">
+    <div class="topic-grid">
+      <a class="topic" href="#t-account" style="--tc:#4a7bff">
+        <span class="topic-ic"><svg class="ic"><use href="#i-user"/></svg></span>
+        <b>Account &amp; sign-in</b><span>New phone, sign-in, delete account</span>
+      </a>
+      <a class="topic" href="#t-premium" style="--tc:#ffb21f">
+        <span class="topic-ic"><img src="/assets/arena/tabs/skins.webp" alt=""></span>
+        <b>Premium &amp; billing</b><span>Cancel, refunds, restore purchases</span>
+      </a>
+      <a class="topic" href="#t-arena" style="--tc:#ff7a2f">
+        <span class="topic-ic"><img src="/assets/arena/tabs/battle.webp" alt=""></span>
+        <b>Arena &amp; battles</b><span>Trophies, performance, getting started</span>
+      </a>
+      <a class="topic" href="#t-rewards" style="--tc:#a970ff">
+        <span class="topic-ic"><img src="/assets/arena/tabs/chests.webp" alt=""></span>
+        <b>Chests &amp; rewards</b><span>Daily chests, coins, skins, creator codes</span>
+      </a>
+      <a class="topic" href="#t-friends" style="--tc:#ff5ca3">
+        <span class="topic-ic"><svg class="ic"><use href="#i-users"/></svg></span>
+        <b>Friends &amp; online</b><span>Friend codes, invites, safety</span>
+      </a>
+      <a class="topic" href="#t-tracking" style="--tc:#36d17f">
+        <span class="topic-ic"><svg class="ic"><use href="#i-heart"/></svg></span>
+        <b>Tracking &amp; Apple Health</b><span>Health access, food logging</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="help-faq stone" id="faq">
+  <div class="wrap help-faq-wrap">
+
+    <div class="faq-group" id="t-account">
+      <h2 class="faq-head" style="--tc:#4a7bff">Account &amp; sign-in</h2>
+      <div class="faq">
+        <details>
+          <summary>How do I get my progress on a new phone?</summary>
+          <p>Install Evolve Arena and sign in the same way you did before: Sign in with Apple, Google or email. Your progress, including your Arena progress, is saved to your account.</p>
+        </details>
+        <details>
+          <summary>I can't sign in.</summary>
+          <p>Make sure you're using the same sign-in method as before. An account made with Sign in with Apple won't open with Google, and the other way round. Still stuck? <a href="#contact">Email us</a> with the email address on your account.</p>
+        </details>
+        <details>
+          <summary>How do I delete my account?</summary>
+          <p>In the app, go to Profile → Settings → Delete Account. This permanently deletes your data, including your character, stats, achievements and workout history, and can't be undone. Deleting your account doesn't cancel an App Store subscription, so cancel Premium first (see below).</p>
+        </details>
+      </div>
+    </div>
+
+    <div class="faq-group" id="t-premium">
+      <h2 class="faq-head" style="--tc:#ffb21f">Premium &amp; billing</h2>
+      <div class="faq">
+        <details>
+          <summary>What comes with Premium?</summary>
+          <p>The Arena and all 10 heroes are free. Premium is an optional subscription that unlocks Premium hero skins, AI meal scanning, AI voice food logging and the "What's in my fridge?" scanner. Current prices are on the subscription screen and the App Store listing.</p>
+        </details>
+        <details>
+          <summary>How do I cancel my subscription?</summary>
+          <p>Subscriptions are managed by Apple. On your iPhone, open Settings, tap your name, then Subscriptions, choose Evolve and tap Cancel Subscription. Premium stays on until the end of the period you've paid for.</p>
+        </details>
+        <details>
+          <summary>How do I ask for a refund?</summary>
+          <p>Apple handles all App Store payments and refunds. Request one at <a href="https://reportaproblem.apple.com" rel="noopener" target="_blank">reportaproblem.apple.com</a> with the Apple ID you paid with.</p>
+        </details>
+        <details>
+          <summary>I paid, but Premium isn't showing.</summary>
+          <p>Go to Profile → Settings → Plans &amp; Subscription and tap Restore Purchases while signed in to the same Apple ID you paid with. If it still doesn't show, <a href="#contact">email us</a> and include your App Store receipt.</p>
+        </details>
+      </div>
+    </div>
+
+    <div class="faq-group" id="t-arena">
+      <h2 class="faq-head" style="--tc:#ff7a2f">Arena &amp; battles</h2>
+      <div class="faq">
+        <details>
+          <summary>Where do I find the Arena?</summary>
+          <p>Tap the Arena banner on Home. Swipe or use the bottom bar to move between Journey, Cards, Battle, Chests and Store.</p>
+        </details>
+        <details>
+          <summary>Do I have to work out to play?</summary>
+          <p>No, you can battle straight away. Training makes your hero stronger: your real strength, cardio, mind, nutrition and consistency stats set your hero's damage, speed, reload and health.</p>
+        </details>
+        <details>
+          <summary>My phone gets hot or the game stutters.</summary>
+          <p>Open the Arena settings (the gear in the Battle lobby) and set Graphics quality to Battery saver. It applies from your next battle. A phone that gets hot also switches to Battery saver by itself mid-battle.</p>
+        </details>
+        <details>
+          <summary>I lost a match. Did I lose my rank?</summary>
+          <p>A loss can cost trophies, but it never drops you below a rank you've already reached.</p>
+        </details>
+      </div>
+    </div>
+
+    <div class="faq-group" id="t-rewards">
+      <h2 class="faq-head" style="--tc:#a970ff">Chests &amp; rewards</h2>
+      <div class="faq">
+        <details>
+          <summary>How many chests can I get?</summary>
+          <p>Up to 15 free chests a day, earned by playing. Chests you win wait for you until you open them.</p>
+        </details>
+        <details>
+          <summary>Can I buy coins or chests?</summary>
+          <p>No. Coins, chests and skins can't be bought with real money. Chests are free rewards from playing, and coins unlock skins in the Store. Premium hero skins come with Premium.</p>
+        </details>
+        <details>
+          <summary>Where do I enter a creator code?</summary>
+          <p>In the Arena, open the Store and use Support a creator. A creator code doesn't change any price or content; it just tells us who sent you.</p>
+        </details>
+      </div>
+    </div>
+
+    <div class="faq-group" id="t-friends">
+      <h2 class="faq-head" style="--tc:#ff5ca3">Friends &amp; online</h2>
+      <div class="faq">
+        <details>
+          <summary>How do I add friends?</summary>
+          <p>Tap the friends button next to your hero in the Battle lobby, then share your friend code or invite link. When a friend accepts, the host picks a mode and map and you both ready up.</p>
+        </details>
+        <details>
+          <summary>What do I get for inviting a friend?</summary>
+          <p>When a friend joins with your invite link and finishes their first match, you both get a free gift chest.</p>
+        </details>
+        <details>
+          <summary>Is there chat? Is it safe for kids?</summary>
+          <p>There's no text or voice chat. Other players only see your hero name, the hero you play and preset emote pins. Hero names are checked against a blocklist, friends can only be added with a code or link, and you can remove a friend at any time from the Friends screen.</p>
+        </details>
+      </div>
+    </div>
+
+    <div class="faq-group" id="t-tracking">
+      <h2 class="faq-head" style="--tc:#36d17f">Tracking &amp; Apple Health</h2>
+      <div class="faq">
+        <details>
+          <summary>How do I change what Evolve reads from Apple Health?</summary>
+          <p>Open the Health app, tap your profile picture, then Apps under Privacy, and choose Evolve. You can turn each data type on or off there at any time.</p>
+        </details>
+        <details>
+          <summary>How accurate are photo and voice calorie estimates?</summary>
+          <p>They're AI estimates, not lab measurements. You see what was detected, adjust the portion and confirm before anything is logged.</p>
+        </details>
+        <details>
+          <summary>What happens to my data?</summary>
+          <p>Our <a href="/privacy.html">Privacy Policy</a> explains what we collect, why, and how to delete it.</p>
+        </details>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-copy">
+      <span class="kicker">Still stuck?</span>
+      <h2 class="title">Talk to the <span class="gold">team</span></h2>
+      <p>Send us a message and a real person on the Evolve team will get back to you as soon as we can.</p>
+      <a class="contact-email" href="mailto:evolve@theevolve.app">
+        <svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg>
+        <span><small>Email us directly</small>evolve@theevolve.app</span>
+      </a>
+      <ul class="contact-tips">
+        <li><b>Your iPhone model</b> and iOS version</li>
+        <li><b>What happened</b>, and what you expected instead</li>
+        <li><b>A screenshot</b> if you can, for anything that looks wrong</li>
+      </ul>
+      <img class="contact-hero" src="/assets/arena/heroes/atlas.webp" alt="" aria-hidden="true" width="560" height="840" loading="lazy">
+    </div>
+
+    <form class="contact-card" data-support-form>
+      <div class="field-row">
+        <label class="field"><span>Name</span><input type="text" name="name" placeholder="Your name" autocomplete="name"></label>
+        <label class="field"><span>Email</span><input type="email" name="email" placeholder="you@example.com" inputmode="email" autocomplete="email"></label>
+      </div>
+      <fieldset class="field">
+        <legend>What's it about?</legend>
+        <div class="issue-chips">
+          <label><input type="radio" name="issue" value="Arena & battles" checked><span>Arena</span></label>
+          <label><input type="radio" name="issue" value="Account help"><span>Account</span></label>
+          <label><input type="radio" name="issue" value="Billing question"><span>Billing</span></label>
+          <label><input type="radio" name="issue" value="Bug report"><span>Bug</span></label>
+          <label><input type="radio" name="issue" value="Feature request"><span>Idea</span></label>
+          <label><input type="radio" name="issue" value="General support"><span>Other</span></label>
+        </div>
+      </fieldset>
+      <label class="field"><span>Message</span><textarea name="message" rows="6" placeholder="Tell us what happened and how we can help." required></textarea></label>
+      <button class="btn btn-gold btn-block" type="submit">Email support <svg class="ic"><use href="#i-arrow"/></svg></button>
+      <p class="contact-note">This opens your email app with your message filled in. No mail app? Email <a href="mailto:evolve@theevolve.app">evolve@theevolve.app</a>.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="brand" href="/"><img src="/assets/arena/icon-256.webp" alt="" width="40" height="40" loading="lazy"><span class="brand-word"><b>Evolve</b><i>Arena</i></span></a>
+        <span class="follow-label">Follow us on</span>
+        <div class="socials socials-sm">
+          <a href="https://www.tiktok.com/@evolveirlshow" aria-label="Evolve on TikTok" rel="noopener" target="_blank"><svg class="ic"><use href="#i-tiktok"/></svg></a>
+          <a href="https://www.instagram.com/evolveirlshow/" aria-label="Evolve on Instagram" rel="noopener" target="_blank"><svg class="ic"><use href="#i-instagram"/></svg></a>
+          <a href="https://www.youtube.com/@EvolveIRLShow" aria-label="Evolve on YouTube" rel="noopener" target="_blank"><svg class="ic"><use href="#i-youtube"/></svg></a>
+        </div>
+      </div>
+      <a class="appstore appstore-dark" href="https://apps.apple.com/app/id6743642232" aria-label="Download Evolve Arena on the App Store">
+        <svg class="ic"><use href="#i-apple"/></svg><span><small>Download on the</small>App Store</span>
+      </a>
+    </div>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="/support/">Support</a>
+      <a href="/creators/">Creator Program</a>
+      <a href="/terms.html">Terms &amp; Conditions</a>
+      <a href="/privacy.html">Privacy Policy</a>
+    </nav>
+    <p class="legal">© <span id="year">2026</span> Evolve. Apple, the Apple logo and iPhone are trademarks of Apple Inc. Evolve Arena provides estimates for general wellness and is not medical advice.</p>
+  </div>
+</footer>
+
+<script src="/arena.js" defer></script>
+<script src="/support/support.js" defer></script>
+</body>
 </html>
