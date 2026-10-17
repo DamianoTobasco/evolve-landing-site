@@ -22,7 +22,7 @@ if (supportForm) {
     ].filter(Boolean);
 
     const body = lines.join("\n");
-    const mailtoUrl = `mailto:evolve@theevolve.app?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoUrl = `mailto:contact@theevolve.app?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     window.location.href = mailtoUrl;
   });
